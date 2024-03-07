@@ -1,0 +1,11 @@
+{
+  "name": "timetide",
+  "version": "1.0.0",
+  "description": "backend api for seamlessly managing university timetables",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lakshan s n",
+  "license": "ISC"
+}
