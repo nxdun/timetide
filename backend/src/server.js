@@ -20,7 +20,7 @@ const notificationRoutes = require('./routes/notificationRoutes');
 const lecturerRoutes = require('./routes/lecturerRoutes');
 
 // Use route files for each module
-//app.use(express.json({ limit: "2mb" }));
+//complete database management ops
 app.use('/api/userRoles', userRolesRoutes);
 app.use('/api/student', studentRoutes);
 app.use('/api/courses', courseRoutes);
@@ -32,9 +32,8 @@ app.use('/api/lecturer', lecturerRoutes);
 
 // MongoDB connection
 app.listen(port, () => {
-    //run const connect
     connect();
-    logger.info(`Server is running on port ${port}`);
+    logger.info(`Server is running on port  ${port}`);
 });
 
 
