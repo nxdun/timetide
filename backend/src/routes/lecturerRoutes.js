@@ -61,7 +61,7 @@ router.patch('/:id', getLecturer, async (req, res) => {
 // DELETE a lecturer
 router.delete('/:id', getLecturer, async (req, res) => {
     try {
-        await res.lecturer.remove();
+        await Lecturer.findByIdAndDelete(req.params.id);
         res.json({ message: 'Lecturer deleted' });
     } catch (error) {
         res.status(500).json({ message: error.message });

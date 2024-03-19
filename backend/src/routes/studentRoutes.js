@@ -63,7 +63,7 @@ router.patch('/:id', getStudent, async (req, res) => {
 // Delete a student
 router.delete('/:id', getStudent, async (req, res) => {
     try {
-        await res.student.remove();
+        await Student.findByIdAndDelete(req.params.id);
         res.json({ message: 'Student deleted' });
     } catch (error) {
         res.status(500).json({ message: error.message });

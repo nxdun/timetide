@@ -21,7 +21,7 @@ const bookingSchema = new Schema({
   },
   Type: {
     type: String,
-    enum: ['lab', 'lec', 'tute'],
+    enum: ['LAB', 'Lecture', 'Tutorial'],
     required: true
   },
   hall: {

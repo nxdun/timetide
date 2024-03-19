@@ -21,14 +21,14 @@ const lecturerRoutes = require('./routes/lecturerRoutes');
 
 // Use route files for each module
 //app.use(express.json({ limit: "2mb" }));
-//app.use('/api/userRoles', userRolesRoutes);
-//app.use('/api/students', studentRoutes);
-//app.use('/api/courses', courseRoutes);
-//app.use('/api/halls', hallRoutes);
-//app.use('/api/resources', resourceRoutes);
-//app.use('/api/bookings', bookingsRoutes);
-//app.use('/api/notifications', notificationRoutes);
-app.use('/lec', lecturerRoutes);
+app.use('/api/userRoles', userRolesRoutes);
+app.use('/api/student', studentRoutes);
+app.use('/api/courses', courseRoutes);
+app.use('/api/halls', hallRoutes);
+app.use('/api/resources', resourceRoutes);
+app.use('/api/bookings', bookingsRoutes);
+app.use('/api/notifications', notificationRoutes);
+app.use('/api/lecturer', lecturerRoutes);
 
 // MongoDB connection
 app.listen(port, () => {
