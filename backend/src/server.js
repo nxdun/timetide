@@ -1,13 +1,20 @@
+// Import necessary modules here
 const express = require('express');
+const logger = require('./config/logger.js');
+
+require('dotenv').config();
 
 const app = express();
-const port = 3009;
+
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    //sample response
+    // Sample response
     res.send('Hello World!');
 });
 
+
+// Start the server
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    logger.info(`Server is running on port ${port}`);
 });

@@ -32,25 +32,8 @@ Contact information for the project maintainer.
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/MhkFIDKy)
 
 student can view timetable for selected module
+time table is weekly basis, not day to day basis
 
-(student can only view,contents are lecturer name(mr.neo, course code(AF), building name(New_Building), floor(5), hallid(A500), start time(8:00AM), stop time(10:00AM), lecture type(lab,lecture,tute))), 
-
-my current schema
-
-UserRoles:_id, username, password, role(student, lecturer,admin), refObject(if student contains 1 tudent object reference, same to lecturers, admin is pre built without referring to any ids)
-
-Lecturer:_id,honour,name, contact_mail,contact_no
-Student:_id,name,regnb,Courses(refer to course id, 1 to many ids)
-
-Course:_id, Ccode, description,credits,lecturerobjects(contains assigned lecturer objects for for a single course can be one or many objects),
-schedule(reference to bookings _id , 1 to many ids)
-
-hall:_id,hallid, buildingName, floor,resources(objectids from resource table)
-resource:_id,name,description,isAvilable
-
-bookings:_id, StartTime, EndTime, BookedDay,Course(refers to course _id) ,Type(lab, lec, tute), hall(reference to hall _id)
-
-Notification:_id, userID
 
 // UserRoles Collection
 UserRoles: {
