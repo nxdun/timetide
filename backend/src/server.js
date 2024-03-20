@@ -1,41 +1,39 @@
-
 const express = require('express');
-const logger = require('./config/logger.js');
-const  connect  = require('./config/dbconnection.js');
-require('dotenv').config();
-const bodyParser = require('body-parser');
 const app = express();
+const logger = require('./config/logger.js');
+const connect = require('./config/dbconnection.js');
+const bodyParser = require('body-parser');
+const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
+const jwtAuth = require('./middleware/middlewareJwt.js');
+
+app.use(helmet()); // Middleware for anti-XSS attacks
+app.use(bodyParser.json());
+require('dotenv').config();
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-
-// Import route files for each module
-const userRolesRoutes = require('./routes/userRolesRoutes');
-const studentRoutes = require('./routes/studentRoutes');
-const courseRoutes = require('./routes/courseRoutes');
-const hallRoutes = require('./routes/hallRoutes');
-const resourceRoutes = require('./routes/resourceRoutes');
-const bookingsRoutes = require('./routes/bookingsRoutes');
-const notificationRoutes = require('./routes/notificationRoutes');
-const lecturerRoutes = require('./routes/lecturerRoutes');
-
-// Use route files for each module
-//complete database management ops
-app.use('/api/userRoles', userRolesRoutes);
-app.use('/api/student', studentRoutes);
-app.use('/api/courses', courseRoutes);
-app.use('/api/halls', hallRoutes);
-app.use('/api/resources', resourceRoutes);
-app.use('/api/bookings', bookingsRoutes);
-app.use('/api/notifications', notificationRoutes);
-app.use('/api/lecturer', lecturerRoutes);
-
-// MongoDB connection
-app.listen(port, () => {
-    connect();
-    logger.info(`Server is running on port  ${port}`);
+// Create a rate limiter instance
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: "Too many requests from this IP, please try again later."
 });
 
+// Apply the rate limiter to all requests
+app.use(limiter);
 
+const dbRouter = require('./routes/dbRouter');
 
+// Apply JWT authentication middleware only to routes under /api
+app.use('/api', jwtAuth);
 
+// Now mount the router for database CRUD operations
+app.use('/api', dbRouter);
+
+const authRouter = require('./routes/authRouter.js');
+app.use('/auth', authRouter);  // All user authentication operations
+
+app.listen(port, () => { 
+    connect();
+    logger.info(`Server is running on port  ${port}`);
+});   // MongoDB connection listener

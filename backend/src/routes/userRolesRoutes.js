@@ -10,6 +10,7 @@ async function getUserRole(req, res, next) {
     try {
         userRole = await UserRoles.findById(req.params.id);
         if (!userRole) {
+            //loge params
             return res.status(404).json({ message: 'User role not found' });
         }
     } catch (error) {
