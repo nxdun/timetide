@@ -1,10 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-// Uncomment if you're using JWT authentication
-// const jwtAuth = expressJwt({ secret: process.env.JWT_SECRET, algorithms: ['HS256'] });
-// const jwt = require('jsonwebtoken');
-// const expressJwt = require('express-jwt');
 
 // Import route files
 const userRolesRoutes = require('./userRolesRoutes');

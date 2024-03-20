@@ -3,7 +3,7 @@ require('dotenv').config();
 const secret = process.env.JWT_SECRET;
 
 function jwtAuth(req, res, next) {
-    const token = req.header('Authorization');
+    const token = req.header('auth');
 
     if (!token) {
         return res.status(401).json({ message: 'Access denied. No token provided.' });

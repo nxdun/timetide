@@ -4,13 +4,16 @@ const UserRoles = require('../models/userRolesSchema');
 const bcrypt = require('bcryptjs');
 const logger = require('../config/logger.js');
 
+//middleware for object validation
+const validateRefObject = require('../middleware/validaterefinuserRoles.js')
+
 // Middleware function to get user role by ID
 async function getUserRole(req, res, next) {
     let userRole;
     try {
         userRole = await UserRoles.findById(req.params.id);
         if (!userRole) {
-            //loge params
+            //log params
             return res.status(404).json({ message: 'User role not found' });
         }
     } catch (error) {
@@ -72,41 +75,40 @@ router.get('/:id', getUserRole, (req, res) => {
 });
 
 // CREATE a new user role and return result as JSON
-router.post('/', hashPassword, async (req, res) => {
-    try{
-    logger.debug('[userRolesRoutes] create new user role request received');
-    const userRole = new UserRoles({
-        username: req.body.username,
-        password: req.body.password,
-        role: req.body.role,
-        refObject: req.body.refObject
-    });
+router.post('/', validateRefObject, hashPassword, async (req, res) => {
+    try {
+        logger.debug('[userRolesRoutes] create new user role request received');
+        const userRole = new UserRoles({
+            username: req.body.username,
+            password: req.body.password,
+            role: req.body.role,
+            refObject: req.body.refObject
+        });
 
-   
         const newUserRole = await userRole.save();
         res.status(200).json(newUserRole);
     } catch (error) {
-        logger.error('[userRolesRoutes] Create a new user request failed with error: ' + error.message);
+        logger.error('[userRolesRoutes] Create a new user role request failed with error: ' + error.message);
         res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
     }
 });
 
 // UPDATE a user role
-router.patch('/:id', getUserRole, hashPassword, async (req, res) => {
+router.patch('/:id', getUserRole, validateRefObject, hashPassword, async (req, res) => {
     try {
-    logger.debug('[userRolesRoutes] update user role request received with id: ' + req.params.id);
-    if (req.body.username != null) {
-        res.userRole.username = req.body.username;
-    }
-    if (req.body.password != null) {
-        res.userRole.password = req.body.password;
-    }
-    if (req.body.role != null) {
-        res.userRole.role = req.body.role;
-    }
-    if (req.body.refObject != null) {
-        res.userRole.refObject = req.body.refObject;
-    }
+        logger.debug('[userRolesRoutes] update user role request received with id: ' + req.params.id);
+        if (req.body.username != null) {
+            res.userRole.username = req.body.username;
+        }
+        if (req.body.password != null) {
+            res.userRole.password = req.body.password;
+        }
+        if (req.body.role != null) {
+            res.userRole.role = req.body.role;
+        }
+        if (req.body.refObject != null) {
+            res.userRole.refObject = req.body.refObject;
+        }
 
         const updatedUserRole = await res.userRole.save();
         res.json(updatedUserRole);

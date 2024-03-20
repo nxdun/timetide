@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Hall = require('../models/hallSchema');
 const logger = require('../config/logger');
-
+const mongoose = require('mongoose');
+const Resource = require('../models/resourceSchema');
 // Middleware function to get hall by ID
 async function getHall(req, res, next) {
     let hall;
@@ -45,15 +46,34 @@ router.get('/:id', getHall, (req, res) => {
 
 // CREATE a new hall
 router.post('/', async (req, res) => {
-    logger.debug('[hallRoutes] post request received with body: ' + JSON.stringify(req.body));
-    const hall = new Hall({
-        hallid: req.body.hallid,
-        buildingName: req.body.buildingName,
-        floor: req.body.floor,
-        resources: req.body.resources
-    });
-
     try {
+        logger.debug('[hallRoutes] post request received with body: ' + JSON.stringify(req.body));
+
+        // Validate if all resource objects exist in the database
+        const resourcesExist = await Promise.all(req.body.resources.map(async resourceId => {
+            // Validate if this is a valid ObjectId
+            if (!mongoose.Types.ObjectId.isValid(resourceId)) {
+                return false; // Return false if it's not a valid ObjectId
+            }
+
+            // Find the resource by ID
+            const resource = await Resource.findById(resourceId);
+            return resource !== null; // Return true if resource exists, false otherwise
+        }));
+
+        if (resourcesExist.includes(false)) {
+            return res.status(400).json({ message: 'One or more resource objects do not exist or contain invalid ObjectId.' });
+        }
+
+        // Create a new hall object
+        const hall = new Hall({
+            hallid: req.body.hallid,
+            buildingName: req.body.buildingName,
+            floor: req.body.floor,
+            resources: req.body.resources
+        });
+
+        // Save the new hall object to the database
         const newHall = await hall.save();
         res.status(201).json(newHall);
     } catch (error) {
@@ -64,21 +84,41 @@ router.post('/', async (req, res) => {
 
 // UPDATE a hall
 router.patch('/:id', getHall, async (req, res) => {
-    logger.debug('[hallRoutes] update hall request received with id: ' + req.params.id);
-    if (req.body.hallid != null) {
-        res.hall.hallid = req.body.hallid;
-    }
-    if (req.body.buildingName != null) {
-        res.hall.buildingName = req.body.buildingName;
-    }
-    if (req.body.floor != null) {
-        res.hall.floor = req.body.floor;
-    }
-    if (req.body.resources != null) {
-        res.hall.resources = req.body.resources;
-    }
-
     try {
+        logger.debug('[hallRoutes] update hall request received with id: ' + req.params.id);
+
+        // Update hall properties if provided in the request body
+        if (req.body.hallid != null) {
+            res.hall.hallid = req.body.hallid;
+        }
+        if (req.body.buildingName != null) {
+            res.hall.buildingName = req.body.buildingName;
+        }
+        if (req.body.floor != null) {
+            res.hall.floor = req.body.floor;
+        }
+        if (req.body.resources != null) {
+            // Validate if all resource objects exist in the database
+            const resourcesExist = await Promise.all(req.body.resources.map(async resourceId => {
+                // Validate if this is a valid ObjectId
+                if (!mongoose.Types.ObjectId.isValid(resourceId)) {
+                    return false; // Return false if it's not a valid ObjectId
+                }
+
+                // Find the resource by ID
+                const resource = await Resource.findById(resourceId);
+                return resource !== null; // Return true if resource exists, false otherwise
+            }));
+
+            if (resourcesExist.includes(false)) {
+                return res.status(400).json({ message: 'One or more resource objects do not exist or contain invalid ObjectId.' });
+            }
+
+            // Assign the resources to the hall
+            res.hall.resources = req.body.resources;
+        }
+
+        // Save the updated hall object to the database
         const updatedHall = await res.hall.save();
         res.json(updatedHall);
     } catch (error) {
@@ -86,6 +126,7 @@ router.patch('/:id', getHall, async (req, res) => {
         res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
     }
 });
+
 
 // DELETE a hall
 router.delete('/:id', getHall, async (req, res) => {

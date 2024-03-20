@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 
-// Middleware function to get user role by name
+// router specific Middleware function to get user role by name
 
 async function getUserRole(req, res, next) {
     try {
