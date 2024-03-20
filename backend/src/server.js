@@ -32,6 +32,9 @@ app.use('/api', dbRouter);
 const authRouter = require('./routes/authRouter.js');
 app.use('/auth', authRouter);  // All user authentication operations
 
+const serviceRouter = require('./routes/serviceRouter.js');
+app.use('/generate', serviceRouter);  // All service operations
+
 app.listen(port, () => { 
     connect();
     logger.info(`Server is running on port  ${port}`);
