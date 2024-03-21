@@ -10,6 +10,7 @@ const helmet = require('helmet');
 const serviceRouter = require('./routes/serviceRouter.js');
 const authRouter = require('./routes/authRouter.js');
 const dbRouter = require('./routes/dbRouter');
+const notificationRouter = require('./routes/notifiRouter.js');
 const port = process.env.PORT || 3000; //default is 3000
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -26,6 +27,7 @@ app.use(limiter)             // Apply the rate limiter to all requests
 app.use('/api', dbRouter);     //all crud operations
 app.use('/auth', authRouter);  // All user authentication operations
 app.use('/generate', serviceRouter);  // All service operations
+app.use('/notifications', notificationRouter);  // All service operations
 
 
 app.listen(port, () => {
