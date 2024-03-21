@@ -106,8 +106,8 @@
                         <mxPoint x="-410.06999999999994" y="-9.960000000000036" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="44" value="ref object for admin is special" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="-700" y="-110" width="180" height="30" as="geometry"/>
+                <mxCell id="44" value="refobject only can create 1 role for each" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-725" y="-110" width="230" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="45" value="" style="endArrow=none;html=1;entryX=0.297;entryY=0.964;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="19" target="6" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -186,6 +186,9 @@
                 </mxCell>
                 <mxCell id="69" value="2nd" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
                     <mxGeometry x="-770" y="285" width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="functionality to add lecobj, schedule for given id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-725" y="680" width="280" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

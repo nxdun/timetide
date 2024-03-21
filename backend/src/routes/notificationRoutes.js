@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Notification = require('../models/notificationSchema');
+const User = require('../models/userRolesSchema');
 
 // Middleware function to get notification by ID
 async function getNotification(req, res, next) {
@@ -34,6 +35,13 @@ router.get('/:id', getNotification, (req, res) => {
 
 // CREATE a new notification
 router.post('/', async (req, res) => {
+
+    // Check if the user exists
+
+    const user = await User.findById(req.body.userID);
+    if (!user) {
+        return res.status(404).json({ message: 'User not found/Registerd' });
+    }
     const notification = new Notification({
         userID: req.body.userID,
         message: req.body.message
@@ -43,7 +51,7 @@ router.post('/', async (req, res) => {
         const newNotification = await notification.save();
         res.status(201).json(newNotification);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(400).json({ message: `:[  Somthing wrong hapenned` });
     }
 });
 
