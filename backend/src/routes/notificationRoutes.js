@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
 
     const user = await User.findById(req.body.userID);
     if (!user) {
-        return res.status(404).json({ message: 'User not found/Registerd' });
+        return res.status(404).json({ message: 'User not found/ Registerd' });
     }
     const notification = new Notification({
         userID: req.body.userID,

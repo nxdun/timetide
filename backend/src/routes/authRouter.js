@@ -29,6 +29,10 @@ async function getUserRole(req, res, next) {
 
 router.post('/login', getUserRole, async (req, res) => {
     logger.debug('[login]: req.body:', req.body);
+    
+    if (req.cookies.auth || req.cookies.auth !== undefined) {
+        return res.status(400).json({ message: 'User already logged in' });
+    }
     // lets check if username and password are provided
     if (!req.body.username || !req.body.password ) {
         return res.status(400).json({ message: 'All fields are required' });
@@ -44,8 +48,11 @@ router.post('/login', getUserRole, async (req, res) => {
         
         // Generate JWT token
         const token = jwt.sign({ username: userRole.username, role: userRole.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
-
+        //set cookie to token
+        res.cookie('obj', userRole.referObject);
+        res.cookie('auth', token);
         // Send JWT token in response
+        //TODO:REMOVE THE TOKEN FROM RESPONSE
         res.status(200).json({ message: 'Login successful', token: token });
     } else {
         logger.error('Invalid credentials for username:', req.username);
@@ -55,7 +62,6 @@ router.post('/login', getUserRole, async (req, res) => {
 
 //can register stdents 
 router.get('/register', (req, res) => {
-    //TODO:sends student object so view can be rendered only if user is admin
     res.send('here lies Register page');
 }
 );
@@ -75,7 +81,9 @@ router.post('/register', (req, res) => {
 );
 
 router.get('/logout', (req, res) => {
-    res.send('Logout page');
+    res.clearCookie('auth');
+    res.clearCookie('obj');
+    res.status(200).json({ message: 'Logout successful' });
 }
 );
 

@@ -6,8 +6,10 @@ const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const jwtAuth = require('./middleware/middlewareJwt.js');
+const cookieParser = require('cookie-parser');
 
 app.use(helmet()); // Middleware for anti-XSS attacks
+app.use(cookieParser());
 app.use(bodyParser.json());
 require('dotenv').config();
 const port = process.env.PORT || 3000;
