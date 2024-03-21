@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="QRX_XwvU44ALQT-0RQsE" name="Page-1">
-        <mxGraphModel dx="2115" dy="1151" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1786" dy="963" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="67" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+                <mxCell id="67" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
                     <mxGeometry x="230" y="790" width="370" height="190" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="" style="group" parent="1" vertex="1" connectable="0">
@@ -34,7 +34,7 @@
                 <mxCell id="10" value="Bookings" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
                     <mxGeometry x="140" width="70" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="66" value="created at end" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="8">
+                <mxCell id="66" value="created at end" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
                     <mxGeometry x="140" y="195" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="" style="group" parent="1" vertex="1" connectable="0">
@@ -72,9 +72,6 @@
                 </mxCell>
                 <mxCell id="30" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="27" vertex="1">
                     <mxGeometry x="360" y="85" width="30" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="68" value="add rules to it match with lec or user id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="27">
-                    <mxGeometry x="130" y="115" width="230" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="" style="group" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="-40" y="1030" width="390" height="170" as="geometry"/>
@@ -181,14 +178,22 @@
                 <mxCell id="63" value="need to add start time end time validation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="160" y="670" width="240" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" value="set is avilable false when resource is added to hall" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="65" value="set is avilable false when resource is added to hall" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="820" y="1270" width="290" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" value="2nd" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="69" value="2nd" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-770" y="285" width="40" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="70" value="functionality to add lecobj, schedule for given id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="70" value="functionality to add lecobj, schedule for given id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-725" y="680" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="add batch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="255" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" style="edgeStyle=none;html=1;" edge="1" parent="1" source="18">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-210" y="450" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>

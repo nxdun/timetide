@@ -49,7 +49,7 @@ router.post('/login', getUserRole, async (req, res) => {
         // Generate JWT token
         const token = jwt.sign({ username: userRole.username, role: userRole.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
         //set cookie to token
-        res.cookie('obj', userRole.referObject);
+        res.cookie('obj', userRole.refObject);
         res.cookie('auth', token);
         // Send JWT token in response
         //TODO:REMOVE THE TOKEN FROM RESPONSE
@@ -62,7 +62,10 @@ router.post('/login', getUserRole, async (req, res) => {
 
 //can register stdents 
 router.get('/register', (req, res) => {
-    res.send('here lies Register page');
+    if (req.cookies.auth || req.cookies.auth !== undefined) {
+        res.redirect('/api/userroles');
+    }
+    res.status(400).json({ message: 'Ask admin/lecturer to register' });
 }
 );
 
