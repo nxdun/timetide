@@ -8,33 +8,10 @@ const logger = require('../config/logger.js');
 const validateRefObject = require('../middleware/validaterefinuserRoles.js')
 
 // Middleware function to get user role by ID
-async function getUserRole(req, res, next) {
-    let userRole;
-    try {
-        userRole = await UserRoles.findById(req.params.id);
-        if (!userRole) {
-            //log params
-            return res.status(404).json({ message: 'User role not found' });
-        }
-    } catch (error) {
-        return res.status(500).json({ message: error.message });
-    }
-    res.userRole = userRole;
-    next();
-}
+const getUserRole = require('../middleware/getUserRole.js');
 
 // Middleware function to hash password before saving to database
-async function hashPassword(req, res, next) {
-    try {
-        if (req.body.password) {
-            const hashedPassword = await bcrypt.hash(req.body.password, 10);
-            req.body.password = hashedPassword;
-        }
-        next();
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-}
+const hashPassword = require('../middleware/hashPassword.js');
 
 // GET all user roles and return as JSON
 router.get('/', async (req, res) => {

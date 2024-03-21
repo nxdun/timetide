@@ -6,30 +6,22 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
+//middleware for jwt token
+const jwtAuth = require('../middleware/middlewareJwt.js');
 
-// router specific Middleware function to get user role by name
+//middleware for object validation
+const validateRefObject = require('../middleware/validaterefinuserRoles.js')
 
-async function getUserRole(req, res, next) {
-    try {
-        const username = req.body.username;
-        console.log("Searching for user role with username:", username);
+// Middleware function to get user role by ID
+const getUserRole = require('../middleware/getUserRole.js');
 
-        const userRole = await UserRoles.findOne({ username: username });
-        if (!userRole) {
-            logger.error('User role not found for username:', username);
-            return res.status(404).json({ message: 'User role not found' });
-        }
-        res.userRole = userRole;
-        next();
-    } catch (error) {
-        console.error("Error while fetching user role:", error);
-        return res.status(500).json({ message: ':[ Internal server error'});
-    }
-}
+// Middleware function to hash password before saving to database
+const hashPassword = require('../middleware/hashPassword.js');
+
 
 router.post('/login', getUserRole, async (req, res) => {
-    logger.debug('[login]: req.body:', req.body);
     
+    //lets check if user is already logged in
     if (req.cookies.auth || req.cookies.auth !== undefined) {
         return res.status(400).json({ message: 'User already logged in' });
     }
@@ -39,6 +31,7 @@ router.post('/login', getUserRole, async (req, res) => {
     }
     //lets set the username and password and userole to variables
     const { username, password } = req.body;
+    //assign userRole received from getUserRole middleware 
     const userRole = res.userRole;
 
     //lets check the password
@@ -49,7 +42,7 @@ router.post('/login', getUserRole, async (req, res) => {
         // Generate JWT token
         const token = jwt.sign({ username: userRole.username, role: userRole.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
         //set cookie to token
-        res.cookie('obj', userRole.refObject);
+        res.cookie('refobj', userRole.refObject);
         res.cookie('auth', token);
         // Send JWT token in response
         //TODO:REMOVE THE TOKEN FROM RESPONSE
@@ -60,28 +53,40 @@ router.post('/login', getUserRole, async (req, res) => {
     }
 });
 
-//can register stdents 
-router.get('/register', (req, res) => {
-    if (req.cookies.auth || req.cookies.auth !== undefined) {
-        res.redirect('/api/userroles');
+
+//can register students 
+router.post('/register',jwtAuth ,  validateRefObject, hashPassword, async (req, res) => {
+    //lets check if user is a admin or lecturer
+    if (req.userRole.role !== 'admin' || req.userRole.role !== 'lecturer') {
+        return res.status(400).json({ message: 'You are not authorized to perform this operation' });
     }
-    res.status(400).json({ message: 'Ask admin/lecturer to register' });
-}
-);
+    //lets check if user is already logged in
+    if (req.cookies.auth !== undefined) {
+        return res.status(400).json({ message: 'try logging out first' });
+    }
 
-//can register stdents 
-router.post('/register', (req, res) => {
-    //TODO:make this only admins can register new users
-    //assign username,password,role,referObject to variables
+    //lets check if username and password are provided
+    if (!req.body.username || !req.body.password || !req.body.role || !req.body.refObject) {
+        return res.status(400).json({ message: 'All fields are required to proceed' });
+    }
 
-   const { username, password, role, referObject } = req.body;
-   //check all constains are not empty
-   if (!username || !password || !role || !referObject) {
-       return res.status(400).json({ message: 'All fields are required' });
-   }
-   
-}
-);
+    try {
+
+        logger.debug('[userRolesRoutes] create new user role request received');
+        const userRole = new UserRoles({
+            username: req.body.username,
+            password: req.body.password,
+            role: req.body.role,
+            refObject: req.body.refObject
+        });
+
+        const newUserRole = await userRole.save();
+        res.status(200).json(newUserRole);
+    } catch (error) {
+        logger.error('[userRolesRoutes] Create a new user role request failed with error: ' + error.message);
+        res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
+    }
+});
 
 router.get('/logout', (req, res) => {
     res.clearCookie('auth');
@@ -90,10 +95,12 @@ router.get('/logout', (req, res) => {
 }
 );
 
-router.get('/forgot-password', (req, res) => {
-    //just send patch request to reset password in api/users
-    res.send('Forgot password page');
+router.post('/logout', (req, res) => {
+    res.clearCookie('auth');
+    res.clearCookie('obj');
+    res.status(200).json({ message: 'Logout successful' });
 }
 );
+
 
 module.exports = router;

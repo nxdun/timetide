@@ -1,11 +1,9 @@
-const pino = require('pino');
-const fs = require('fs');
+const pino = require("pino");
+const multistream = require("pino-multi-stream").multistream;
+const fileStream = pino.destination("./pino-logger.log");
 
-// Create a writable stream for the log file
-const logStream = fs.createWriteStream('./src/config/logs.log', { flags: 'a' });
-
-// Create a Pino logger instance with options and destination
-const logger = pino({
+//this will print only console with pretty print
+const consoleTransport = pino({
   level: 'debug',
   transport: {
     target: "pino-pretty",
@@ -15,11 +13,20 @@ const logger = pino({
       ignore: "pid,hostname",
     },
   }
-}, logStream);
-
-// Error handling for log file writing
-logStream.on('error', (err) => {
-  console.error('Error occurred while writing to log file:', err);
 });
 
-module.exports = logger;
+//this will print logs to both file and console without pretty print
+//so server have very less overhead
+const logger = pino(
+  {
+    levelFirst: true,
+    translateTime: "yyyy-dd-mm, h:MM:ss TT",
+    
+  },
+  multistream([
+    { stream: fileStream },
+    { stream: process.stdout, ...consoleTransport },
+  ])
+);
+
+module.exports = consoleTransport;

@@ -1,5 +1,11 @@
 const Student = require('../models/studentSchema');
 const Lecturer = require('../models/lecturerSchema');
+const UserRoles = require('../models/userRolesSchema');
+const bcrypt = require('bcryptjs');
+const logger = require('../config/logger.js');
+const e = require('express');
+require('dotenv').config();
+
 
 async function validateRefObject(req, res, next) {
     const { role, refObject } = req.body;
@@ -17,11 +23,22 @@ async function validateRefObject(req, res, next) {
             if (lecturer) {
                 req.refObject = lecturer;
                 return next();
+            }else if(role === 'admin') {
+                logger.info('Admin Login request received');
+                const username = req.body.username;
+                const password = req.body.password;
+                const userRole = await UserRoles.findOne({ username: username });
+                const validPassword = await bcrypt.compare(password, userRole.password);
+                if(validPassword){
+                    logger.info('Administrator Login successful');
+                    req.refObject = userRole;
+                    return next();
+                }
             }
+                return res.status(400).json({ message: 'Sorry user reference is invalid' });
+            
         }
 
-        // If role is not 'student' or 'lecturer', or if refObject doesn't match the role
-        return res.status(400).json({ message: 'Invalid refObject ID or role.' });
     } catch (error) {
         console.error(error);
         return res.status(500).json({ message: 'Internal Server Error' });
