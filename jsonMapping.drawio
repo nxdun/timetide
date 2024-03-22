@@ -190,11 +190,6 @@
                 <mxCell id="71" value="add batch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="170" y="255" width="80" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" style="edgeStyle=none;html=1;" edge="1" parent="1" source="18">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="-210" y="450" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>

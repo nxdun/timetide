@@ -34,6 +34,11 @@ router.get('/:id', getResource, (req, res) => {
 
 // CREATE a new resource
 router.post('/', async (req, res) => {
+    //userrole management
+    //only admin allowed to access
+    if (req.userRole != 'admin') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
     const resource = new Resource({
         name: req.body.name,
         description: req.body.description,
@@ -50,6 +55,11 @@ router.post('/', async (req, res) => {
 
 // UPDATE a resource
 router.patch('/:id', getResource, async (req, res) => {
+    //userrole management
+    //only admin allowed to access
+    if (req.userRole != 'admin') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
     if (req.body.name != null) {
         res.resource.name = req.body.name;
     }
@@ -70,6 +80,11 @@ router.patch('/:id', getResource, async (req, res) => {
 
 // DELETE a resource
 router.delete('/:id', getResource, async (req, res) => {
+    //userrole management
+    //only admin allowed to access
+    if (req.userRole != 'admin') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
     try {
         await Resource.findByIdAndDelete(req.params.id);
         res.json({ message: 'Resource deleted' });

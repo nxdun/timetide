@@ -3,7 +3,6 @@ const router = express.Router();
 const UserRoles = require('../models/userRolesSchema');
 const bcrypt = require('bcryptjs');
 const logger = require('../config/logger.js');
-const jwtMiddleware = require('../middleware/middlewareJwt');
 
 //middleware for object validation
 const validateRefObject = require('../middleware/validaterefinuserRoles.js')
@@ -15,7 +14,7 @@ const getUserRole = require('../middleware/getUserRole.js');
 const hashPassword = require('../middleware/hashPassword.js');
 
 // GET all user roles and return as JSON
-router.get('/',jwtMiddleware , async (req, res) => {
+router.get('/' , async (req, res) => {
     //role check
     //allow admin only
     if (req.user.role != 'admin') {
@@ -37,7 +36,7 @@ router.get('/',jwtMiddleware , async (req, res) => {
 
 //get user role objectid by username
 //returns true if password is correct, else 500 + err message
-router.get('/get/:id', jwtMiddleware, async (req, res) => {
+router.get('/get/:id', async (req, res) => {
     //role check
     //allows anyone who logged in
     //if role is student, only allow to get own user role
@@ -67,7 +66,7 @@ router.get('/get/:id', jwtMiddleware, async (req, res) => {
 
 
 // GET a single user role by ID and return as JSON
-router.get('/:id',jwtMiddleware, getUserRole, (req, res) => {
+router.get('/:id', getUserRole, (req, res) => {
     //role check
     //admin can access all user roles
     if (req.user.role != 'admin') {
@@ -84,9 +83,10 @@ router.get('/:id',jwtMiddleware, getUserRole, (req, res) => {
 });
 
 // CREATE a new user role and return result as JSON
-router.post('/',jwtMiddleware,validateRefObject, hashPassword, async (req, res) => {
+router.post('/',validateRefObject, hashPassword, async (req, res) => {
     //role check
     //only admin can create user role
+    //not allowed to create admin user role
     if (req.user.role != 'admin') {
         logger.error(`[userRolesRoutes] Unauthrized operation requst ${req.user}` );
         return res.status(401).json({ message: " :[  You are not authorized to perform this operation" });
@@ -111,7 +111,8 @@ router.post('/',jwtMiddleware,validateRefObject, hashPassword, async (req, res) 
 });
 
 // UPDATE a user role
-router.patch('/:id',jwtMiddleware, getUserRole, validateRefObject, hashPassword, async (req, res) => {
+router.patch('/:id', getUserRole, validateRefObject, hashPassword, async (req, res) => {
+    //not allowed to create admin user role
     //role check
     //only admin can update user role
     if (req.user.role != 'admin') {
@@ -143,8 +144,13 @@ router.patch('/:id',jwtMiddleware, getUserRole, validateRefObject, hashPassword,
 });
 
 // DELETE a user role
-router.delete('/:id',jwtMiddleware, getUserRole, async (req, res) => {
+router.delete('/:id', getUserRole, async (req, res) => {
     //role check
+    //no one csan delete admin user role
+    if (res.userRole.role == 'admin') {
+        logger.error(`[userRolesRoutes] Someone trying to delete admin role ${req.user}` );
+        return res.status(401).json({ message: " :[  You are not authorized to perform this operation" });
+    }
     //only admin and lecturer can delete user role
     if (req.user.role != 'admin' && req.user.role != 'lecturer') {
         logger.error(`[userRolesRoutes] Unauthrized operation requst ${req.user}` );

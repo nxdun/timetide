@@ -45,7 +45,14 @@ router.get('/:id', getBooking, (req, res) => {
 
 // CREATE a new booking
 router.post('/', async (req, res) => {
+    //userrole management
+    //only students not allowed to access
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+
     logger.debug('[bookingsRoutes] post request received with body: ' + JSON.stringify(req.body));
+
     try {
         // Validate if the provided hall exists
         const hallExists = await Hall.findById(req.body.hall);
@@ -79,6 +86,11 @@ router.post('/', async (req, res) => {
 
 // UPDATE a booking
 router.patch('/:id', getBooking, async (req, res) => {
+    //userrole management
+    //only students not allowed to access
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
     logger.debug('[bookingsRoutes] patch request received with id: ' + req.params.id + ' and body: ' + JSON.stringify(req.body));
     try {
         if (req.body.hall) {
@@ -122,6 +134,12 @@ router.patch('/:id', getBooking, async (req, res) => {
 
 // DELETE a booking
 router.delete('/:id', getBooking, async (req, res) => {
+    //userrole management
+    //only students not allowed to access
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+    
     logger.debug('[bookingsRoutes] delete request received with id: ' + req.params.id);
     try {
         await Bookings.findByIdAndDelete(req.params.id);

@@ -24,13 +24,12 @@ async function getNotification(req, res, next) {
 router.get('/', async (req, res) => {
     //userrole management
     //only students not allowed to access
+    //sepreate routes avilable for students
     if (req.userRole == 'student') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
 
-    if (req.userRole == 'student') {
-        return res.status(401).json({ message: 'Unauthorized' });
-    }
+
     try {
         const notifications = await Notification.find();
         res.json(notifications);

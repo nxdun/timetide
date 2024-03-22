@@ -23,17 +23,6 @@ async function validateRefObject(req, res, next) {
             if (lecturer) {
                 req.refObject = lecturer;
                 return next();
-            }else if(role === 'admin') {
-                logger.info('Admin Login request received');
-                const username = req.body.username;
-                const password = req.body.password;
-                const userRole = await UserRoles.findOne({ username: username });
-                const validPassword = await bcrypt.compare(password, userRole.password);
-                if(validPassword){
-                    logger.info('Administrator Login successful');
-                    req.refObject = userRole;
-                    return next();
-                }
             }
                 return res.status(400).json({ message: 'Sorry user reference is invalid' });
             

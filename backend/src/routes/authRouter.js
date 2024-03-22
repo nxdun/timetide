@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const logger = require('../config/logger.js');
 const UserRoles = require('../models/userRolesSchema');
+const Student = require('../models/studentSchema');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
@@ -40,13 +41,13 @@ router.post('/login', getUserRole, async (req, res) => {
         logger.info('Login successful for username:', req.username);
         
         // Generate JWT token
-        const token = jwt.sign({ username: userRole.username, role: userRole.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ username: userRole.username, role: userRole.role, ref: userRole.refObject }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRY });
         //set cookie to token
         res.cookie('refobj', userRole.refObject);
         res.cookie('auth', token);
         // Send JWT token in response
         //TODO:REMOVE THE TOKEN FROM RESPONSE
-        res.status(200).json({ message: 'Login successful', token: token });
+        res.status(200).json({ message: 'Login successful' });
     } else {
         logger.error('Invalid credentials for username:', req.username);
         res.status(400).json({ message: 'Invalid credentials' }); 
@@ -54,46 +55,61 @@ router.post('/login', getUserRole, async (req, res) => {
 });
 
 
-//can register students 
-router.post('/register',jwtAuth ,  validateRefObject, hashPassword, async (req, res) => {
-    //lets check if user is a admin or lecturer
-    if (req.userRole.role !== 'admin' || req.userRole.role !== 'lecturer') {
-        return res.status(400).json({ message: 'You are not authorized to perform this operation' });
-    }
+//can register students
+//student username should match Student schemas regnb
+//if lecturer give regid, student can register lecturer 
+router.post('/register' , hashPassword, async (req, res) => {
+    //create global variable for refObject
+    let objId ;
     //lets check if user is already logged in
     if (req.cookies.auth !== undefined) {
         return res.status(400).json({ message: 'try logging out first' });
     }
-
-    //lets check if username and password are provided
-    if (!req.body.username || !req.body.password || !req.body.role || !req.body.refObject) {
+    //lets check body fields
+    if (!req.body.username || !req.body.password || !req.body.role ) {
         return res.status(400).json({ message: 'All fields are required to proceed' });
     }
-
-    try {
-
-        logger.debug('[userRolesRoutes] create new user role request received');
-        const userRole = new UserRoles({
-            username: req.body.username,
-            password: req.body.password,
-            role: req.body.role,
-            refObject: req.body.refObject
-        });
-
-        const newUserRole = await userRole.save();
-        res.status(200).json(newUserRole);
-    } catch (error) {
-        logger.error('[userRolesRoutes] Create a new user role request failed with error: ' + error.message);
-        res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
+    //student username should match Student schemas regnb
+    if(req.body.role == 'student'){
+        const student = await Student.findOne({regnb: req.body.username});
+        if(!student){
+            return res.status(400).json({ message: 'Student id  is not currently registered try again later' });
+        }
+        objId = student._id;
+    }else if(req.body.role == 'lecturer'){
+    objId = req.body.refObject;
+    }else{
+        return res.status(400).json({ message: 'Invalid role' });
     }
-});
+
+        try {
+    
+            logger.debug('[userRolesRoutes] create new user role request received');
+            const userRole = new UserRoles({
+                username: req.body.username,
+                password: req.body.password,
+                role: req.body.role,
+                refObject: objId
+            });
+    
+            const newUserRole = await userRole.save();
+            res.status(200).json("Successfully Registered");
+            logger.info(`userRolesRoutes] New user role created successfully with id: ${newUserRole._id}`);
+        } catch (error) {
+            logger.error('[userRolesRoutes] Create a new user role request failed with error: ' + error.message);
+            res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
+        }
+    
+    }
+);
+    
+
 
 router.get('/logout', (req, res) => {
     res.clearCookie('auth');
     res.clearCookie('obj');
     res.status(200).json({ message: 'Logout successful' });
-}
-);
+});
 
 router.post('/logout', (req, res) => {
     res.clearCookie('auth');
@@ -101,6 +117,47 @@ router.post('/logout', (req, res) => {
     res.status(200).json({ message: 'Logout successful' });
 }
 );
+
+//forget password
+//body fields username, role, newpassword
+router.post('/forgetpassword', async (req, res) => {
+    //limit the request to 5 per minute
+    
+    //lets check role is lecturer or student
+    if(req.body.role !== 'lecturer' && req.body.role !== 'student'){
+        return res.status(400).json({ message: 'Invalid role' });
+    }
+    //lets check if user is already logged in
+    if (req.cookies.auth !== undefined) {
+        return res.status(400).json({ message: 'try logging out first' });
+    }
+    //lets check body fields
+    if (!req.body.username || !req.body.role || !req.body.newpassword) {
+        return res.status(400).json({ message: 'All fields are required to proceed' });
+    }
+    //lets check if user exists
+    const userRole = await UserRoles.findOne({ username: req.body.username });
+    if (!userRole) {
+        return res.status(400).json({ message: 'User not found' });
+    }
+    if (userRole.role !== req.body.role) {
+        return res.status(400).json({ message: 'Invalid role' });
+    }
+    //hash the new password
+    const hashedPassword = await bcrypt.hash(req.body.newpassword, 10);
+    //update the password
+    try {
+        await UserRoles.updateOne({ username: req.body.username }, { password: hashedPassword });
+        res.status(200).json({ message: 'Password updated successfully' });
+    } catch (error) {
+        res.status(500).json({ message: 'Server error' });
+    }
+    
+});
+
+router.post('/validate', jwtAuth, async (req, res) => {
+    res.status(200).json({ message: 'Token is valid' });
+});
 
 
 module.exports = router;

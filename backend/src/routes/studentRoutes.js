@@ -5,10 +5,9 @@ const Student = require('../models/studentSchema');
 const Course = require('../models/courseSchema');
 const mongoose = require('mongoose');
 const getStudent = require('../middleware/getStuById');
-const jwtMiddleware = require('../middleware/middlewareJwt');
 
 // Get all students
-router.get('/',jwtMiddleware,  async (req, res) => {
+router.get('/',  async (req, res) => {
     //roles: admin, lecturer
     if (req.user.role === 'student') {
         logger.error(`Unauthorized access to students by {${req.user}}`);
@@ -24,7 +23,7 @@ router.get('/',jwtMiddleware,  async (req, res) => {
 });
 
 // Get a single student
-router.get('/:id',jwtMiddleware, getStudent, (req, res) => {
+router.get('/:id', getStudent, (req, res) => {
     //roles: admin, lecturer   
     if (req.user.role === 'student') {
         logger.error(`Unauthorized access to student by {${req.user}}`);
@@ -43,6 +42,11 @@ router.post('/', async (req, res) => {
     }
     try {
         const { name, regnb, enrolledCourses } = req.body;
+        //validate regnb is unique
+        const stid = await Student.findOne({ regnb: regnb });
+        if (stid) {
+            return res.status(400).json({ message: 'Duplicate student id not allowed' });
+        }
         
         // lets check object ids one by one in req body
         const areAllValidIds = enrolledCourses.every(courseId => mongoose.Types.ObjectId.isValid(courseId));
@@ -83,7 +87,7 @@ router.post('/', async (req, res) => {
 
 
 // Update a student
-router.patch('/:id',jwtMiddleware, getStudent, async (req, res) => {
+router.patch('/:id', getStudent, async (req, res) => {
     //roles: admin, lecturer
     if (req.user.role === 'student') {
         logger.error(`Unauthorized access to update student by {${req.user}}`);
@@ -129,7 +133,7 @@ router.patch('/:id',jwtMiddleware, getStudent, async (req, res) => {
 
 
 // Delete a student
-router.delete('/:id',jwtMiddleware, getStudent, async (req, res) => {
+router.delete('/:id', getStudent, async (req, res) => {
     //roles: admin, lecturer
     if (req.user.role === 'student') {
         logger.error(`Unauthorized access to delete student by {${req.user}}`);

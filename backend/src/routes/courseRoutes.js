@@ -58,6 +58,11 @@ router.get("/:id", getCourse, (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  //students not allowed to access
+  if (req.userRole == 'student') {
+      return res.status(401).json({ message: 'Unauthorized' });
+  }
+
     try {
         logger.debug('[courseRoutes] post request received with body: ' + JSON.stringify(req.body));
 
@@ -136,6 +141,11 @@ router.post('/', async (req, res) => {
 
 // UPDATE a course
 router.patch("/:id", getCourse, async (req, res) => {
+  //students not allowed to access
+  if (req.userRole == 'student') {
+      return res.status(401).json({ message: 'Unauthorized' });
+  }
+
   try {
     if (req.body.Ccode != null) {
       res.course.Ccode = req.body.Ccode;
@@ -229,6 +239,11 @@ router.patch("/:id", getCourse, async (req, res) => {
 
 // DELETE a course
 router.delete("/:id", getCourse, async (req, res) => {
+  //students not allowed to access
+  if (req.userRole == 'student') {
+      return res.status(401).json({ message: 'Unauthorized' });
+  }
+  
   logger.debug(
     "[courseRoutes] delete course request received with id: " + req.params.id
   );
