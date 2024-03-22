@@ -5,6 +5,8 @@ const User = require('../models/userRolesSchema');
 
 // Middleware function to get notification by ID
 async function getNotification(req, res, next) {
+    
+
     let notification;
     try {
         notification = await Notification.findById(req.params.id);
@@ -20,6 +22,15 @@ async function getNotification(req, res, next) {
 
 // GET all notifications
 router.get('/', async (req, res) => {
+    //userrole management
+    //only students not allowed to access
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
     try {
         const notifications = await Notification.find();
         res.json(notifications);
@@ -30,11 +41,21 @@ router.get('/', async (req, res) => {
 
 // GET a single notification by ID
 router.get('/:id', getNotification, (req, res) => {
+    //userrole management
+    //only students not allowed to access
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
     res.json(res.notification);
 });
 
 // CREATE a new notification
 router.post('/', async (req, res) => {
+    //userrole management
+    //only students not allowed to access
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
 
     // Check if the user exists
 
@@ -57,6 +78,12 @@ router.post('/', async (req, res) => {
 
 // UPDATE a notification
 router.patch('/:id', getNotification, async (req, res) => {
+    //userrole management
+    //only students not allowed to access
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+
     if (req.body.userID != null) {
         res.notification.userID = req.body.userID;
     }
@@ -74,6 +101,12 @@ router.patch('/:id', getNotification, async (req, res) => {
 
 // DELETE a notification
 router.delete('/:id', getNotification, async (req, res) => {
+    //userrole management
+    //only students not allowed to access
+    if (req.userRole == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+    
     try {
         await Notification.findByIdAndDelete(req.params.id);
         res.json({ message: 'Notification deleted' });

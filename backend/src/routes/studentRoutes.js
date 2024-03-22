@@ -4,9 +4,16 @@ const logger = require('../config/logger');
 const Student = require('../models/studentSchema');
 const Course = require('../models/courseSchema');
 const mongoose = require('mongoose');
+const getStudent = require('../middleware/getStuById');
+const jwtMiddleware = require('../middleware/middlewareJwt');
 
 // Get all students
-router.get('/', async (req, res) => {
+router.get('/',jwtMiddleware,  async (req, res) => {
+    //roles: admin, lecturer
+    if (req.user.role === 'student') {
+        logger.error(`Unauthorized access to students by {${req.user}}`);
+        return res.status(403).json({ message: 'Unauthorized' });
+    }
     logger.info('Get all students');
     try {
         const students = await Student.find();
@@ -17,13 +24,23 @@ router.get('/', async (req, res) => {
 });
 
 // Get a single student
-router.get('/:id', getStudent, (req, res) => {
+router.get('/:id',jwtMiddleware, getStudent, (req, res) => {
+    //roles: admin, lecturer   
+    if (req.user.role === 'student') {
+        logger.error(`Unauthorized access to student by {${req.user}}`);
+        return res.status(403).json({ message: 'Unauthorized' });
+    }
     res.json(res.student);
 });
 
 
 // Create a student
 router.post('/', async (req, res) => {
+    //roles: admin, lecturer
+    if (req.user.role === 'student') {
+        logger.error(`Unauthorized access to create student by {${req.user}}`);
+        return res.status(403).json({ message: 'Unauthorized' });
+    }
     try {
         const { name, regnb, enrolledCourses } = req.body;
         
@@ -66,7 +83,12 @@ router.post('/', async (req, res) => {
 
 
 // Update a student
-router.patch('/:id', getStudent, async (req, res) => {
+router.patch('/:id',jwtMiddleware, getStudent, async (req, res) => {
+    //roles: admin, lecturer
+    if (req.user.role === 'student') {
+        logger.error(`Unauthorized access to update student by {${req.user}}`);
+        return res.status(403).json({ message: 'Unauthorized' });
+    }
     try {
         if (req.body.name != null) {
             res.student.name = req.body.name;
@@ -107,7 +129,12 @@ router.patch('/:id', getStudent, async (req, res) => {
 
 
 // Delete a student
-router.delete('/:id', getStudent, async (req, res) => {
+router.delete('/:id',jwtMiddleware, getStudent, async (req, res) => {
+    //roles: admin, lecturer
+    if (req.user.role === 'student') {
+        logger.error(`Unauthorized access to delete student by {${req.user}}`);
+        return res.status(403).json({ message: 'Unauthorized' });
+    }
     try {
         await Student.findByIdAndDelete(req.params.id);
         res.json({ message: 'Student deleted' });
@@ -116,20 +143,7 @@ router.delete('/:id', getStudent, async (req, res) => {
     }
 });
 
-// Middleware function to get student by ID
-async function getStudent(req, res, next) {
-    let student;
-    try {
-        student = await Student.findById(req.params.id);
-        if (student == null) {
-            return res.status(404).json({ message: 'Student not found' });
-        }
-    } catch (error) {
-        return res.status(500).json({ message: error.message });
-    }
-    res.student = student;
-    next();
-}
+
 
 
 

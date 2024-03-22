@@ -2,9 +2,14 @@ const express = require('express');
 const router = express.Router();
 const Lecturer = require('../models/lecturerSchema');
 const logger = require('../config/logger.js');
+const jwtMiddleware = require('../middleware/middlewareJwt.js');
 
 // GET all lecturers
-router.get('/', async (req, res) => {
+router.get('/',jwtMiddleware, async (req, res) => {
+    //role based access control
+    if (req.user.role != 'admin') {
+        return res.status(403).json({ message: 'Forbidden' });
+    }
     logger.debug('[lecturerRoutes] get all lecturers request received');
     try {
         const lecturers = await Lecturer.find();
@@ -17,6 +22,14 @@ router.get('/', async (req, res) => {
 
 // GET a single lecturer by ID
 router.get('/:id', getLecturer, (req, res) => {
+    //role based access control
+    //lecturer and admin can access also lecturer can access only his/her data
+    if (req.user.role == 'student') {
+        return res.status(403).json({ message: 'Forbidden' });
+    }
+    if (req.user.role == 'lecturer' && req.user._id != req.params.id) {
+        return res.status(403).json({ message: 'Forbidden' });
+    }
     logger.debug('[lecturerRoutes] get request received with id: ' + req.params.id);
     try{
     res.json(res.lecturer);
@@ -29,6 +42,11 @@ router.get('/:id', getLecturer, (req, res) => {
 
 // CREATE a new lecturer
 router.post('/', async (req, res) => {
+    //role based access control
+    if (req.user.role != 'admin') {
+        return res.status(403).json({ message: 'Forbidden' });
+    }
+
     logger.debug('[lecturerRoutes] post request received with body: ' + JSON.stringify(req.body));
     try {
         console.log(req.body);
@@ -49,6 +67,10 @@ router.post('/', async (req, res) => {
 
 // UPDATE a lecturer
 router.patch('/:id', getLecturer, async (req, res) => {
+    //role based access control
+    if (req.user.role != 'admin') {
+        return res.status(403).json({ message: 'Forbidden' });
+    }
     logger.debug('[lecturerRoutes] update lecturer request received with id: ' + req.params.id);
     if (req.body.name != null) {
         res.lecturer.name = req.body.name;
@@ -74,6 +96,11 @@ router.patch('/:id', getLecturer, async (req, res) => {
 
 // DELETE a lecturer
 router.delete('/:id', getLecturer, async (req, res) => {
+    //role based access control
+    if (req.user.role != 'admin') {
+        return res.status(403).json({ message: 'Forbidden' });
+    }
+    
     logger.debug('[lecturerRoutes] delete lecturer request received with id: ' + req.params.id);
     try {
         await Lecturer.findByIdAndDelete(req.params.id);
