@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
 // GET a single booking by ID
 router.get('/:id', getBooking, (req, res) => {
     try {
-    res.json(res.booking);
+    res.status(200).json(res.booking);
     }catch (error) {
         logger.error('[bookingsRoutes] get request failed with error: ' + error.message);
         res.status(500).json({ message: " :[  3Looks Like Something bad happening in Server" });
@@ -75,12 +75,9 @@ router.post('/', async (req, res) => {
         const newBooking = await booking.save();
         res.status(201).json(newBooking);
 
-
-
-
     } catch (error) {
         logger.error('[bookingsRoutes] post request failed with error: ' + error.message);
-        res.status(400).json({ message: " :[  4Looks Like Something bad happening in Server" });
+        res.status(40).json({ message: " :[  4Looks Like Something bad happening in Server" });
     }
 });
 

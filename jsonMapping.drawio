@@ -52,8 +52,8 @@
                 <mxCell id="23" value="&#10;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;&quot;username&quot;&lt;/span&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;aadmin&quot;&lt;/span&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;pass&quot;&lt;/span&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;&quot;role&quot;&lt;/span&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;admin&quot;&lt;/span&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: #9cdcfe;&quot;&gt;&quot;refObject&quot;&lt;/span&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;610da4f3a0a4c2189e412345&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #dcdcdc;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&#10;&#10;" style="text;whiteSpace=wrap;html=1;" parent="22" vertex="1">
                     <mxGeometry x="20" y="20" width="370" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="Users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="22" vertex="1">
-                    <mxGeometry x="240" width="50" height="30" as="geometry"/>
+                <mxCell id="24" value="Userrole" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="22" vertex="1">
+                    <mxGeometry x="230" width="70" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="22" vertex="1">
                     <mxGeometry x="360" y="85" width="30" height="30" as="geometry"/>
@@ -102,9 +102,6 @@
                         <mxPoint x="-60" y="230" as="sourcePoint"/>
                         <mxPoint x="-410.06999999999994" y="-9.960000000000036" as="targetPoint"/>
                     </mxGeometry>
-                </mxCell>
-                <mxCell id="44" value="refobject only can create 1 role for each" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="-725" y="-110" width="230" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="45" value="" style="endArrow=none;html=1;entryX=0.297;entryY=0.964;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="19" target="6" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">

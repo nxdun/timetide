@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
   logger.debug("[courseRoutes] get all courses request received");
   try {
     const courses = await Course.find();
-    res.json(courses);
+    res.status(200).json(courses);
   } catch (error) {
     logger.error(
       "[courseRoutes] get request failed with error: " + error.message

@@ -38,10 +38,14 @@ app.use("/v1/notifications", notificationRouter); // All service operations
 
 //route all other requests
 app.use("*", (req, res) => {
-  res.status(404).json({ message: "Route not found" });
+  res.status(405).json({ message: "Route not found" });
 });
 
 app.listen(port, () => {
   connect(); //connect with mongodb
   logger.info(`Server is running on port  ${port}`);
 });
+
+
+//for testing purposes
+module.exports = app;

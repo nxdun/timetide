@@ -1,14 +1,14 @@
 import { expect } from "chai";
 import sinon from "sinon";
-import { connect, disconnect } from "../../src/config/dbconnection.js";
-import logger from "../../src/config/logger.js";
-import getStudent from "../../src/middleware/getStuById.js";
-import getUserRole from "../../src/middleware/getUserRole.js";
-import hashPassword from "../../src/middleware/hashPassword.js";
-import jwtAuth from "../../src/middleware/middlewareJwt.js";
-import validateRefObject from "../../src/middleware/validaterefinuserRoles.js";
-describe("Config Folder", () => {
-  describe("dbconnection.js", () => {
+import { connect, disconnect } from "../src/config/dbconnection.js";
+import logger from "../src/config/logger.js";
+import getStudent from "../src/middleware/getStuById.js";
+import getUserRole from "../src/middleware/getUserRole.js";
+import hashPassword from "../src/middleware/hashPassword.js";
+import jwtAuth from "../src/middleware/middlewareJwt.js";
+import validateRefObject from "../src/middleware/validaterefinuserRoles.js";
+describe("[U] Config Folder", () => {
+  describe("[U] dbconnection.js", () => {
     before(() => {
       // Connect to the database before running the testss
       connect();
@@ -28,7 +28,7 @@ describe("Config Folder", () => {
     });
   });
 
-  describe("logger.js", () => {
+  describe("[U] logger.js", () => {
 
       it("should print logs to console with pretty print", () => {
         logger.debug("This is a debug log");
@@ -38,19 +38,18 @@ describe("Config Folder", () => {
     });
   });
 });
-
-
+//db connection required for the middleware tests
 before(async () => {
     // Connect to the database before running the testss
     await connect();
     }
 );
 
-describe("Middleware Folder", () => {
+describe("[U] Middleware Folder", () => {
     
    
 
-  describe("getStuById.js", () => {
+  describe("[U] getStuById.js", () => {
 
     it("should return a student by id...", async () => {
   
@@ -152,7 +151,7 @@ describe("Middleware Folder", () => {
 
   });
 
-  describe("getUserRole.js", () => {
+  describe("[U] getUserRole.js", () => {
     
         it("should return a user role...", async () => {
     
@@ -247,7 +246,7 @@ describe("Middleware Folder", () => {
         
   });
 
-  describe("hashPassword.js", () => {
+  describe("[U] hashPassword.js", () => {
         
         it("should hash the password...", async () => {
     
@@ -310,7 +309,7 @@ describe("Middleware Folder", () => {
         
   });
 
-  describe("middlewareJwt.js", () => {
+  describe("[U] middlewareJwt.js", () => {
             it("should return 200 if a valid token is provided...", async () => {
                 //duplicate entry 
                //validated in another test
@@ -379,7 +378,7 @@ describe("Middleware Folder", () => {
             
   });
 
-  describe("validaterefinuserRoles.js", () => {
+  describe("[U] validaterefinuserRoles.js", () => {
     it("should validate refObject of student...", async () => {
   
         //create request with parameter of id
@@ -471,8 +470,10 @@ describe("Middleware Folder", () => {
 
 });
 
+//disconnect from the database after running the tests
 after(async () => {
     // Disconnect from the database after running the testss
     await disconnect();
     }
 );
+

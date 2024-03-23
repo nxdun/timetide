@@ -31,7 +31,7 @@ const logger = pino(
   },
   multistream([
     { stream: fileStream },
-    { stream: process.stdout, ...consoleTransport },
+   // { stream: process.stdout, ...consoleTransport },
   ])
 );
 

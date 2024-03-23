@@ -1,267 +1,228 @@
-{"level":30,"time":1711180093321,"pid":14180,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711180093323,"pid":14180,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711180093323,"pid":14180,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711180093323,"pid":14180,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711180094808,"pid":14180,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711180094812,"pid":14180,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180094812,"pid":14180,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180100885,"pid":15356,"hostname":"NADUN","msg":"Server is running on port  3030"}
-{"level":30,"time":1711180102029,"pid":15356,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711180175265,"pid":12572,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711180175268,"pid":12572,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711180175269,"pid":12572,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711180175269,"pid":12572,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711180176689,"pid":12572,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711180176695,"pid":12572,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180176695,"pid":12572,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180268875,"pid":7704,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711180268876,"pid":7704,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711180268877,"pid":7704,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711180268877,"pid":7704,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711180270905,"pid":7704,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711180270909,"pid":7704,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180270909,"pid":7704,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180379479,"pid":17156,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711180379481,"pid":17156,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711180379481,"pid":17156,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711180379482,"pid":17156,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711180382322,"pid":17156,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711180382328,"pid":17156,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180382328,"pid":17156,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180777605,"pid":10520,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711180777607,"pid":10520,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711180777607,"pid":10520,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711180777607,"pid":10520,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711180778828,"pid":10520,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711180778845,"pid":10520,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180778845,"pid":10520,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711180842655,"pid":14664,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711180842657,"pid":14664,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711180842657,"pid":14664,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711180842658,"pid":14664,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711180905971,"pid":7300,"hostname":"NADUN","msg":"Server is running on port  3030"}
-{"level":30,"time":1711180907106,"pid":7300,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711180915435,"pid":9392,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711180915437,"pid":9392,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711180915437,"pid":9392,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711180915437,"pid":9392,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181019525,"pid":11056,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181019528,"pid":11056,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181019529,"pid":11056,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181019529,"pid":11056,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181022307,"pid":11056,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181022313,"pid":11056,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181022313,"pid":11056,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181051714,"pid":14448,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181051718,"pid":14448,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181051718,"pid":14448,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181051718,"pid":14448,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181052940,"pid":14448,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181052949,"pid":14448,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181052949,"pid":14448,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181145488,"pid":17024,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181145491,"pid":17024,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181145491,"pid":17024,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181145491,"pid":17024,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181238816,"pid":15028,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181238820,"pid":15028,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181238820,"pid":15028,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181238821,"pid":15028,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181240239,"pid":15028,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181240245,"pid":15028,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181240245,"pid":15028,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181284285,"pid":3080,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181284289,"pid":3080,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181284289,"pid":3080,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181284289,"pid":3080,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181285613,"pid":3080,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181285618,"pid":3080,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181285619,"pid":3080,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181365671,"pid":18600,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181365674,"pid":18600,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181365674,"pid":18600,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181365675,"pid":18600,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181366817,"pid":18600,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181366822,"pid":18600,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181366822,"pid":18600,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181671644,"pid":2956,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181671647,"pid":2956,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181671647,"pid":2956,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181671647,"pid":2956,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181674124,"pid":2956,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181674130,"pid":2956,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181674130,"pid":2956,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181753212,"pid":13752,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181753215,"pid":13752,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181753216,"pid":13752,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181753216,"pid":13752,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181755723,"pid":13752,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181755728,"pid":13752,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181755728,"pid":13752,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181864303,"pid":10332,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181864307,"pid":10332,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181864307,"pid":10332,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181864307,"pid":10332,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181865515,"pid":10332,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181865520,"pid":10332,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181865520,"pid":10332,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181925804,"pid":13272,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711181925808,"pid":13272,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711181925809,"pid":13272,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711181925809,"pid":13272,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711181926950,"pid":13272,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711181926963,"pid":13272,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711181926963,"pid":13272,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711182076499,"pid":6484,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711182076502,"pid":6484,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711182076502,"pid":6484,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711182076503,"pid":6484,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711182077656,"pid":6484,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711182077661,"pid":6484,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711182077661,"pid":6484,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711182377893,"pid":6396,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711182377896,"pid":6396,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711182377896,"pid":6396,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711182377896,"pid":6396,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711182380882,"pid":6396,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711182380886,"pid":6396,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711182380886,"pid":6396,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711182380969,"pid":6396,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182679976,"pid":2936,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711182679980,"pid":2936,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711182679981,"pid":2936,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711182679981,"pid":2936,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711182681217,"pid":2936,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711182681222,"pid":2936,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711182681222,"pid":2936,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711182681302,"pid":2936,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182834743,"pid":16732,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182835847,"pid":16732,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711182868066,"pid":13020,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182869177,"pid":13020,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711182869304,"pid":13020,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182899152,"pid":7352,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182900234,"pid":7352,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711182900338,"pid":7352,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182938962,"pid":10980,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182940068,"pid":10980,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711182940188,"pid":10980,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182977709,"pid":10320,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711182978813,"pid":10320,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711182978946,"pid":10320,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183022810,"pid":2424,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183024704,"pid":2424,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711183024821,"pid":2424,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183091112,"pid":1820,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183093411,"pid":1820,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711183093523,"pid":1820,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183172446,"pid":10320,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183173648,"pid":10320,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711183173768,"pid":10320,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183243893,"pid":5900,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183245010,"pid":5900,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711183245152,"pid":5900,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183267166,"pid":1384,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183268345,"pid":1384,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711183268465,"pid":1384,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183294846,"pid":14084,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711183294850,"pid":14084,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711183294850,"pid":14084,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711183294851,"pid":14084,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711183296112,"pid":14084,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711183296118,"pid":14084,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711183296119,"pid":14084,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711183296200,"pid":14084,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183296206,"pid":14084,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183466415,"pid":18504,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711183466418,"pid":18504,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711183466418,"pid":18504,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711183466418,"pid":18504,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711183469217,"pid":18504,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711183469222,"pid":18504,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711183469222,"pid":18504,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711183469302,"pid":18504,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183469307,"pid":18504,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711183469310,"pid":18504,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184066093,"pid":18796,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711184066097,"pid":18796,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711184066097,"pid":18796,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711184066097,"pid":18796,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711184068359,"pid":18796,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711184068365,"pid":18796,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184068365,"pid":18796,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184068448,"pid":18796,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184068453,"pid":18796,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184068456,"pid":18796,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184068461,"pid":18796,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184291593,"pid":12004,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711184291597,"pid":12004,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711184291598,"pid":12004,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711184291598,"pid":12004,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711184293500,"pid":12004,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711184293506,"pid":12004,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184293506,"pid":12004,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184293587,"pid":12004,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184293590,"pid":12004,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184293591,"pid":12004,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184293593,"pid":12004,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184460457,"pid":8524,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711184460462,"pid":8524,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711184460462,"pid":8524,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711184460462,"pid":8524,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711184462504,"pid":8524,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711184462508,"pid":8524,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184462508,"pid":8524,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184462591,"pid":8524,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184462594,"pid":8524,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184462596,"pid":8524,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184462602,"pid":8524,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184577397,"pid":14512,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711184577403,"pid":14512,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711184577403,"pid":14512,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711184577404,"pid":14512,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711184578531,"pid":14512,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711184578535,"pid":14512,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184578535,"pid":14512,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184578619,"pid":14512,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184578622,"pid":14512,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184578624,"pid":14512,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184578637,"pid":14512,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184693359,"pid":10452,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711184693363,"pid":10452,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711184693363,"pid":10452,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711184693364,"pid":10452,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711184694455,"pid":10452,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711184694460,"pid":10452,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184694460,"pid":10452,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184694545,"pid":10452,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184694548,"pid":10452,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184694549,"pid":10452,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184694558,"pid":10452,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184737594,"pid":13812,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711184737607,"pid":13812,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711184737610,"pid":13812,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711184737610,"pid":13812,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711184738806,"pid":13812,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711184738811,"pid":13812,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184738811,"pid":13812,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711184738895,"pid":13812,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184738898,"pid":13812,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184738900,"pid":13812,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711184738908,"pid":13812,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711186294822,"pid":9172,"hostname":"NADUN","msg":"Database connection established"}
-{"level":50,"time":1711186294825,"pid":9172,"hostname":"NADUN","msg":"This is an error log"}
-{"level":30,"time":1711186294825,"pid":9172,"hostname":"NADUN","msg":"This is an info log"}
-{"level":40,"time":1711186294825,"pid":9172,"hostname":"NADUN","msg":"This is a warn log"}
-{"level":30,"time":1711186298127,"pid":9172,"hostname":"NADUN","msg":"Database connection established"}
-{"level":30,"time":1711186298131,"pid":9172,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711186298131,"pid":9172,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711186298212,"pid":9172,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711186298217,"pid":9172,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711186298220,"pid":9172,"hostname":"NADUN","msg":"validateRefObject middleware called"}
-{"level":30,"time":1711186298224,"pid":9172,"hostname":"NADUN","msg":"Database connection closed"}
-{"level":30,"time":1711186546658,"pid":17572,"hostname":"NADUN","msg":"Server is running on port  3030"}
-{"level":30,"time":1711186692954,"pid":12948,"hostname":"NADUN","msg":"Server is running on port  3030"}
-{"level":50,"time":1711186723004,"pid":12948,"hostname":"NADUN","err":{"type":"MongooseServerSelectionError","message":"Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","stack":"MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (C:\\Users\\nadun\\Desktop\\AF\\assignment-01-nxdun\\backend\\node_modules\\mongoose\\lib\\connection.js:875:11)\n    at NativeConnection.openUri (C:\\Users\\nadun\\Desktop\\AF\\assignment-01-nxdun\\backend\\node_modules\\mongoose\\lib\\connection.js:826:11)","reason":{"type":"ReplicaSetNoPrimary","servers":{},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-9dtmrt-shard-0","maxElectionId":null,"maxSetVersion":null,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null}},"msg":"Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/"}
-{"level":30,"time":1711186945178,"pid":16228,"hostname":"NADUN","msg":"Server is running on port  3030"}
-{"level":50,"time":1711186975232,"pid":16228,"hostname":"NADUN","err":{"type":"MongooseServerSelectionError","message":"Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","stack":"MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (C:\\Users\\nadun\\Desktop\\AF\\assignment-01-nxdun\\backend\\node_modules\\mongoose\\lib\\connection.js:875:11)\n    at NativeConnection.openUri (C:\\Users\\nadun\\Desktop\\AF\\assignment-01-nxdun\\backend\\node_modules\\mongoose\\lib\\connection.js:826:11)","reason":{"type":"ReplicaSetNoPrimary","servers":{},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-9dtmrt-shard-0","maxElectionId":null,"maxSetVersion":null,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null}},"msg":"Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/"}
+{"level":30,"time":1711193195328,"pid":2364,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711193196843,"pid":2364,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711193197933,"pid":2364,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711193198114,"pid":2364,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711193198647,"pid":2364,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65febc6e5d143a97582ebb3e"}
+{"level":30,"time":1711193224545,"pid":16340,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711193225732,"pid":16340,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711193227552,"pid":16340,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711193227742,"pid":16340,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711193228270,"pid":16340,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65febc8ce860d94d223d499f"}
+{"level":30,"time":1711193391750,"pid":18744,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711193413045,"pid":9232,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711193596063,"pid":1300,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711193597419,"pid":1300,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711193597592,"pid":1300,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711193690067,"pid":2340,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711193692399,"pid":2340,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711193692574,"pid":2340,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711193835546,"pid":5052,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711193839556,"pid":5052,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711193841155,"pid":5052,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711193841339,"pid":5052,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711193841870,"pid":5052,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65febef1e3196f878da4fb38"}
+{"level":30,"time":1711193842191,"pid":5052,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711194038684,"pid":18420,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711194039914,"pid":18420,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711194040955,"pid":18420,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711194041142,"pid":18420,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711194041629,"pid":18420,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65febfb9d7ada9d500d7f5b6"}
+{"level":30,"time":1711194041956,"pid":18420,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711194056568,"pid":2228,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711194057739,"pid":2228,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711194058867,"pid":2228,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711194059067,"pid":2228,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711194358579,"pid":16972,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711194417095,"pid":13396,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711194554673,"pid":10988,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711194742542,"pid":11744,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711194747099,"pid":11744,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711194747325,"pid":11744,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711194993432,"pid":18624,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711194995137,"pid":18624,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711194995354,"pid":18624,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711195029151,"pid":15392,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711195030688,"pid":15392,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711195030913,"pid":15392,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711195153618,"pid":13684,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711195155871,"pid":13684,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711209191651,"pid":6424,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711209192934,"pid":6424,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711209194269,"pid":6424,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711209194427,"pid":6424,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711209194886,"pid":6424,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65fefaea77025752eb0de9c0"}
+{"level":30,"time":1711209195148,"pid":6424,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":50,"time":1711209195589,"pid":6424,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711209195737,"pid":6424,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711209195890,"pid":6424,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711209195892,"pid":6424,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMDkxOTUsImV4cCI6MTcxMTIxMjc5NX0.qL2Y9v8rggwZfbp6XqtE2JUsOLyC0MiXhrf2FiXodhY"}
+{"level":30,"time":1711209196380,"pid":6424,"hostname":"NADUN","msg":"[ttest2] postedId: 65fefaec77025752eb0de9ce"}
+{"level":50,"time":1711209196687,"pid":6424,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":50,"time":1711209197746,"pid":6424,"hostname":"NADUN","msg":"[bookingsRoutes] patch request failed with error: Bookings validation failed: Type: `lecture` is not a valid enum value for path `Type`."}
+{"level":50,"time":1711209197750,"pid":6424,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":30,"time":1711209197751,"pid":6424,"hostname":"NADUN","msg":"[poop]/v1/api/bookings/65fefaec77025752eb0de9ce"}
+{"level":30,"time":1711209198084,"pid":6424,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711209198086,"pid":6424,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMDkxOTgsImV4cCI6MTcxMTIxMjc5OH0.23ppXbhojqD73S9p1dsvq9RuXG9NVHjjYECjSbTRBkM"}
+{"level":30,"time":1711209198861,"pid":6424,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 65fefaee77025752eb0de9ea"}
+{"level":50,"time":1711209198874,"pid":6424,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
+{"level":30,"time":1711209198875,"pid":6424,"hostname":"NADUN","msg":"[poop]/v1/api/courses/65fefaee77025752eb0de9ea"}
+{"level":30,"time":1711209465335,"pid":10584,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711209465341,"pid":10584,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711209465346,"pid":10584,"hostname":"NADUN","msg":"This is an error log"}
+{"level":30,"time":1711209465346,"pid":10584,"hostname":"NADUN","msg":"This is an info log"}
+{"level":40,"time":1711209465346,"pid":10584,"hostname":"NADUN","msg":"This is a warn log"}
+{"level":30,"time":1711209466544,"pid":10584,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711209466548,"pid":10584,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209466548,"pid":10584,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209466630,"pid":10584,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209466633,"pid":10584,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209466636,"pid":10584,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209476985,"pid":10584,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209502516,"pid":4104,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711209502521,"pid":4104,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711209502526,"pid":4104,"hostname":"NADUN","msg":"This is an error log"}
+{"level":30,"time":1711209502526,"pid":4104,"hostname":"NADUN","msg":"This is an info log"}
+{"level":40,"time":1711209502526,"pid":4104,"hostname":"NADUN","msg":"This is a warn log"}
+{"level":30,"time":1711209503494,"pid":4104,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711209503500,"pid":4104,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209503500,"pid":4104,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209503581,"pid":4104,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209503584,"pid":4104,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209503587,"pid":4104,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209513930,"pid":4104,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209567755,"pid":13568,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711209567758,"pid":13568,"hostname":"NADUN","msg":"This is an error log"}
+{"level":30,"time":1711209567758,"pid":13568,"hostname":"NADUN","msg":"This is an info log"}
+{"level":40,"time":1711209567758,"pid":13568,"hostname":"NADUN","msg":"This is a warn log"}
+{"level":30,"time":1711209568730,"pid":13568,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711209568736,"pid":13568,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209568736,"pid":13568,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209568818,"pid":13568,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209568822,"pid":13568,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209568825,"pid":13568,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209568830,"pid":13568,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209801622,"pid":19004,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711209803068,"pid":19004,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711209804590,"pid":19004,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711209804741,"pid":19004,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711209805224,"pid":19004,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65fefd4deb0e6fa46bf7b59b"}
+{"level":30,"time":1711209805499,"pid":19004,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":50,"time":1711209805982,"pid":19004,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711209806142,"pid":19004,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711209806300,"pid":19004,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711209806302,"pid":19004,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMDk4MDYsImV4cCI6MTcxMTIxMzQwNn0.dQgsaKkKqREEQ9_XEfcWUYWKWEvIFAujTgbcJ7iF6cw"}
+{"level":30,"time":1711209806782,"pid":19004,"hostname":"NADUN","msg":"[ttest2] postedId: 65fefd4eeb0e6fa46bf7b5a9"}
+{"level":50,"time":1711209807062,"pid":19004,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":50,"time":1711209808263,"pid":19004,"hostname":"NADUN","msg":"[bookingsRoutes] patch request failed with error: Bookings validation failed: Type: `lecture` is not a valid enum value for path `Type`."}
+{"level":50,"time":1711209808267,"pid":19004,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":30,"time":1711209808269,"pid":19004,"hostname":"NADUN","msg":"[poop]/v1/api/bookings/65fefd4eeb0e6fa46bf7b5a9"}
+{"level":30,"time":1711209808641,"pid":19004,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711209808642,"pid":19004,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMDk4MDgsImV4cCI6MTcxMTIxMzQwOH0.BDhYHQ4uk5MoAGZRSgvTGIObYuh95mx6ZRHFYnV89bs"}
+{"level":30,"time":1711209809460,"pid":19004,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 65fefd51eb0e6fa46bf7b5c5"}
+{"level":50,"time":1711209809467,"pid":19004,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
+{"level":30,"time":1711209809469,"pid":19004,"hostname":"NADUN","msg":"[poop]/v1/api/courses/65fefd51eb0e6fa46bf7b5c5"}
+{"level":30,"time":1711209904721,"pid":8112,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711209904727,"pid":8112,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711209904730,"pid":8112,"hostname":"NADUN","msg":"This is an error log"}
+{"level":30,"time":1711209904730,"pid":8112,"hostname":"NADUN","msg":"This is an info log"}
+{"level":40,"time":1711209904730,"pid":8112,"hostname":"NADUN","msg":"This is a warn log"}
+{"level":30,"time":1711209906168,"pid":8112,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711209906174,"pid":8112,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209906174,"pid":8112,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209906256,"pid":8112,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209906259,"pid":8112,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209906263,"pid":8112,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209916616,"pid":8112,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209976832,"pid":2992,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711209976836,"pid":2992,"hostname":"NADUN","msg":"This is an error log"}
+{"level":30,"time":1711209976836,"pid":2992,"hostname":"NADUN","msg":"This is an info log"}
+{"level":40,"time":1711209976836,"pid":2992,"hostname":"NADUN","msg":"This is a warn log"}
+{"level":30,"time":1711209977811,"pid":2992,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711209977816,"pid":2992,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209977816,"pid":2992,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209977900,"pid":2992,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209977904,"pid":2992,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209977907,"pid":2992,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711209977910,"pid":2992,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711209999706,"pid":14444,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711210000697,"pid":14444,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711210002077,"pid":14444,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711210002233,"pid":14444,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711210002734,"pid":14444,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65fefe12763d77b73f5d46e2"}
+{"level":30,"time":1711210003032,"pid":14444,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":50,"time":1711210003493,"pid":14444,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711210003650,"pid":14444,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711210003809,"pid":14444,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711210003811,"pid":14444,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMTAwMDMsImV4cCI6MTcxMTIxMzYwM30.NTTa9ejias4_68stvGNRIrqx8gYdBMHNHUGnykyPJA4"}
+{"level":30,"time":1711210004300,"pid":14444,"hostname":"NADUN","msg":"[ttest2] postedId: 65fefe14763d77b73f5d46f0"}
+{"level":50,"time":1711210004619,"pid":14444,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":50,"time":1711210005873,"pid":14444,"hostname":"NADUN","msg":"[bookingsRoutes] patch request failed with error: Bookings validation failed: Type: `lecture` is not a valid enum value for path `Type`."}
+{"level":50,"time":1711210005877,"pid":14444,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":30,"time":1711210005879,"pid":14444,"hostname":"NADUN","msg":"[poop]/v1/api/bookings/65fefe14763d77b73f5d46f0"}
+{"level":30,"time":1711210006225,"pid":14444,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711210006227,"pid":14444,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMTAwMDYsImV4cCI6MTcxMTIxMzYwNn0.qHWp2FW0mgoU12vP4svpbLZu9p_Lf4yplOh96ycO2kY"}
+{"level":30,"time":1711210006982,"pid":14444,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 65fefe16763d77b73f5d470c"}
+{"level":50,"time":1711210006994,"pid":14444,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
+{"level":30,"time":1711210006996,"pid":14444,"hostname":"NADUN","msg":"[poop]/v1/api/courses/65fefe16763d77b73f5d470c"}
+{"level":30,"time":1711210072538,"pid":2760,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711210072542,"pid":2760,"hostname":"NADUN","msg":"This is an error log"}
+{"level":30,"time":1711210072542,"pid":2760,"hostname":"NADUN","msg":"This is an info log"}
+{"level":40,"time":1711210072542,"pid":2760,"hostname":"NADUN","msg":"This is a warn log"}
+{"level":30,"time":1711210073584,"pid":2760,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711210073590,"pid":2760,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711210073590,"pid":2760,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711210073672,"pid":2760,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711210073675,"pid":2760,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711210073678,"pid":2760,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711210073682,"pid":2760,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711210078002,"pid":15380,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711210079034,"pid":15380,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711210079918,"pid":15380,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711210080084,"pid":15380,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711210080582,"pid":15380,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65fefe607773a1b0f4edbe7e"}
+{"level":30,"time":1711210080849,"pid":15380,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":50,"time":1711210081277,"pid":15380,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711210081433,"pid":15380,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711210081594,"pid":15380,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711210081596,"pid":15380,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMTAwODEsImV4cCI6MTcxMTIxMzY4MX0.x-MRjzPYeEHL6yBJeoy_tgbmX86Z13dy7NS5oTKW6ik"}
+{"level":30,"time":1711210082133,"pid":15380,"hostname":"NADUN","msg":"[ttest2] postedId: 65fefe627773a1b0f4edbe8c"}
+{"level":50,"time":1711210082437,"pid":15380,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":50,"time":1711210083572,"pid":15380,"hostname":"NADUN","msg":"[bookingsRoutes] patch request failed with error: Bookings validation failed: Type: `lecture` is not a valid enum value for path `Type`."}
+{"level":50,"time":1711210083579,"pid":15380,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":30,"time":1711210083581,"pid":15380,"hostname":"NADUN","msg":"[poop]/v1/api/bookings/65fefe627773a1b0f4edbe8c"}
+{"level":30,"time":1711210083923,"pid":15380,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711210083924,"pid":15380,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMTAwODMsImV4cCI6MTcxMTIxMzY4M30.-2FTlj3IoNYCkh29If9_cEinRwcttjujAHGQ_pmBuy0"}
+{"level":30,"time":1711210084667,"pid":15380,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 65fefe647773a1b0f4edbea8"}
+{"level":50,"time":1711210084676,"pid":15380,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
+{"level":30,"time":1711210084678,"pid":15380,"hostname":"NADUN","msg":"[poop]/v1/api/courses/65fefe647773a1b0f4edbea8"}
+{"level":30,"time":1711211065271,"pid":17484,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711211065274,"pid":17484,"hostname":"NADUN","msg":"This is an error log"}
+{"level":30,"time":1711211065274,"pid":17484,"hostname":"NADUN","msg":"This is an info log"}
+{"level":40,"time":1711211065274,"pid":17484,"hostname":"NADUN","msg":"This is a warn log"}
+{"level":30,"time":1711211067107,"pid":17484,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1711211067112,"pid":17484,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711211067112,"pid":17484,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711211067196,"pid":17484,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711211067200,"pid":17484,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711211067202,"pid":17484,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1711211067205,"pid":17484,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1711211083688,"pid":8360,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711211084711,"pid":8360,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1711211085588,"pid":8360,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711211085746,"pid":8360,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711211086261,"pid":8360,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 65ff024edc977364895a5f3a"}
+{"level":30,"time":1711211086544,"pid":8360,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":50,"time":1711211086997,"pid":8360,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1711211087172,"pid":8360,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711211087325,"pid":8360,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711211087328,"pid":8360,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMTEwODcsImV4cCI6MTcxMTIxNDY4N30.p7mzhEmGGuKWTrJjAdqACwwSS1ih2Pzt-YNeEyZXnvE"}
+{"level":30,"time":1711211087855,"pid":8360,"hostname":"NADUN","msg":"[ttest2] postedId: 65ff024fdc977364895a5f48"}
+{"level":50,"time":1711211088161,"pid":8360,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":50,"time":1711211089364,"pid":8360,"hostname":"NADUN","msg":"[bookingsRoutes] patch request failed with error: Bookings validation failed: Type: `lecture` is not a valid enum value for path `Type`."}
+{"level":50,"time":1711211089368,"pid":8360,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":30,"time":1711211089370,"pid":8360,"hostname":"NADUN","msg":"[poop]/v1/api/bookings/65ff024fdc977364895a5f48"}
+{"level":30,"time":1711211089746,"pid":8360,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1711211089748,"pid":8360,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTEyMTEwODksImV4cCI6MTcxMTIxNDY4OX0.Creuzw0YpZEG2jm4ysnr68aUnLOUEox_Nmq3_KpqOzA"}
+{"level":30,"time":1711211090579,"pid":8360,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 65ff0252dc977364895a5f64"}
+{"level":50,"time":1711211090585,"pid":8360,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
+{"level":30,"time":1711211090588,"pid":8360,"hostname":"NADUN","msg":"[poop]/v1/api/courses/65ff0252dc977364895a5f64"}

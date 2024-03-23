@@ -4,7 +4,8 @@
   "description": "backend api for seamlessly managing university timetables",
   "main": "server.js",
   "scripts": {
-    "test": "mocha  test/unit/unit.test2.mjs --exit --timeout 10000 ",
+    "test1": "mocha  test/test.part1.mjs  --exit --timeout 10000 ",
+    "test2": "mocha  test/test.part2.mjs  --exit --timeout 10000 ",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test:watch": "mocha --watch --parallel --watch-files test/**/*.mjs"
@@ -28,10 +29,10 @@
   },
   "devDependencies": {
     "chai": "^5.1.0",
-    "chai-http": "^4.4.0",
     "mocha": "^10.3.0",
     "nodemon": "^3.1.0",
     "pino": "^8.19.0",
-    "pino-pretty": "^10.3.1"
+    "pino-pretty": "^10.3.1",
+    "supertest": "^6.3.4"
   }
 }

@@ -48,11 +48,13 @@ router.post('/login', getUserRole, async (req, res) => {
         // Send JWT token in response
         //TODO:REMOVE THE TOKEN FROM RESPONSE
         res.status(200).json({ message: 'Login successful' });
+
     } else {
         logger.error(`invalid login: ${username}`);
         res.status(400).json({ message: 'Invalid credentials' }); 
     }
 });
+
 
 
 //can register students
@@ -150,13 +152,13 @@ router.post('/register' , hashPassword, async (req, res) => {
 
 router.get('/logout', (req, res) => {
     res.clearCookie('auth');
-    res.clearCookie('obj');
+    res.clearCookie('refobj');
     res.status(200).json({ message: 'Logout successful' });
 });
 
 router.post('/logout', (req, res) => {
     res.clearCookie('auth');
-    res.clearCookie('obj');
+    res.clearCookie('refobj');
     res.status(200).json({ message: 'Logout successful' });
 }
 );
