@@ -38,10 +38,10 @@ router.post('/login', getUserRole, async (req, res) => {
     //lets check the password
     const validPassword = await bcrypt.compare(password, userRole.password);
     if (validPassword) {
-        logger.info('Login successful for username:', req.username);
+        logger.info(`Login successful for username: ${username} with role: ${userRole.role}`);
         
         // Generate JWT token
-        const token = jwt.sign({ username: userRole.username, role: userRole.role, ref: userRole.refObject }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRY });
+        const token = jwt.sign({ username: userRole.username, role: userRole.role, ref: userRole, id:userRole._id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRY });
         //set cookie to token
         res.cookie('refobj', userRole.refObject);
         res.cookie('auth', token);
@@ -49,7 +49,7 @@ router.post('/login', getUserRole, async (req, res) => {
         //TODO:REMOVE THE TOKEN FROM RESPONSE
         res.status(200).json({ message: 'Login successful' });
     } else {
-        logger.error('Invalid credentials for username:', req.username);
+        logger.error(`invalid login: ${username}`);
         res.status(400).json({ message: 'Invalid credentials' }); 
     }
 });
@@ -59,7 +59,47 @@ router.post('/login', getUserRole, async (req, res) => {
 //student username should match Student schemas regnb
 //if lecturer give regid, student can register lecturer 
 router.post('/register' , hashPassword, async (req, res) => {
-    //create global variable for refObject
+
+    //for first time admin registration
+    //body fields username, password, role
+    if(req.body.role == 'admin'){
+        //lets check if user is already logged in
+        if (req.cookies.auth !== undefined) {
+            return res.status(400).json({ message: 'try logging out first' });
+        }
+        //validate the body fields
+        if (!req.body.username || !req.body.password || !req.body.role ) {
+            return res.status(400).json({ message: 'All fields are required to proceed' });
+        }
+        //check if admin credentials are already set in env
+        if(!process.env.ADMIN_USERNAME || !process.env.ADMIN_PASSWORD){
+            return res.status(400).json({ message: 'Unauthorized Operation' });
+        }
+        //compare username and password with admin credentials in env
+        //compare password with hashed password
+        const validPassword = await bcrypt.compare(process.env.ADMIN_PASSWORD, req.body.password);
+        if (req.body.username !== process.env.ADMIN_USERNAME || !validPassword) {
+            return res.status(400).json({ message: 'Unauthorized Operation' });
+        }
+
+        //add admin to userRoles
+        try {
+            const userRole = new UserRoles({
+                username: req.body.username,
+                password: req.body.password,
+                role: 'admin',
+                refObject:"777777777777777777777777" 
+            });
+            const newUserRole = await userRole.save();
+            res.status(200).json("Successfully Registered, Try logging in now");
+            logger.info(`userRolesRoutes] New user role created successfully with id: ${newUserRole._id}`);
+        } catch (error) {
+            logger.error('[userRolesRoutes] Create a new user role request failed with error: ' + error.message);
+            res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
+        }
+    }else{
+
+     //create global variable for refObject
     let objId ;
     //lets check if user is already logged in
     if (req.cookies.auth !== undefined) {
@@ -101,6 +141,9 @@ router.post('/register' , hashPassword, async (req, res) => {
         }
     
     }
+    }
+        
+    
 );
     
 

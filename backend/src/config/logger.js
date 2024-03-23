@@ -1,6 +1,6 @@
 const pino = require("pino");
 const multistream = require("pino-multi-stream").multistream;
-const fileStream = pino.destination("./pino-logger.log");
+const fileStream = pino.destination("./System-logger.log");
 
 //this will print only console with pretty print
 const consoleTransport = pino({
