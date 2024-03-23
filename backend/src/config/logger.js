@@ -1,3 +1,9 @@
+/* 
+** this file is used to configure the logger for the server
+** (dev)consoleTransport is used to print logs to console with pretty print
+** (production)logger is used to print logs to both file and console without pretty print
+*/ 
+
 const pino = require("pino");
 const multistream = require("pino-multi-stream").multistream;
 const fileStream = pino.destination("./System-logger.log");
@@ -29,4 +35,4 @@ const logger = pino(
   ])
 );
 
-module.exports = consoleTransport;
+module.exports = logger;

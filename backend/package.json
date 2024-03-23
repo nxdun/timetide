@@ -4,10 +4,10 @@
   "description": "backend api for seamlessly managing university timetables",
   "main": "server.js",
   "scripts": {
-    "test": "mocha ",
+    "test": "mocha  test/unit/unit.test2.mjs --exit --timeout 10000 ",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test:watch": "mocha --watch --parallel --watch-files test/*.js"
+    "test:watch": "mocha --watch --parallel --watch-files test/**/*.mjs"
   },
   "author": "lakshan s n",
   "license": "ISC",
@@ -23,7 +23,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.2",
-    "pino-multi-stream": "^6.0.0"
+    "pino-multi-stream": "^6.0.0",
+    "sinon": "^17.0.1"
   },
   "devDependencies": {
     "chai": "^5.1.0",

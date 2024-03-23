@@ -1,19 +1,18 @@
 const Student = require('../models/studentSchema');
 
 async function getStudent(req, res, next) {
-    let student;
     try {
-        student = await Student.findById(req.params.id);
+        const student = await Student.findById(req.params.id);
         if (student == null) {
             return res.status(404).json({ message: 'Student not found' });
         }
+        // Send the student data as JSON response
+        res.status(200).json(student);
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
-    res.student = student;
-    next();
 }
 
 module.exports = getStudent;
 
-// Middleware function to get student by ID
+

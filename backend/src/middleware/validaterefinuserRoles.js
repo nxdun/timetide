@@ -1,13 +1,11 @@
 const Student = require('../models/studentSchema');
 const Lecturer = require('../models/lecturerSchema');
-const UserRoles = require('../models/userRolesSchema');
-const bcrypt = require('bcryptjs');
 const logger = require('../config/logger.js');
-const e = require('express');
 require('dotenv').config();
 
 
 async function validateRefObject(req, res, next) {
+    logger.info('validateRefObject middleware called');
     const { role, refObject } = req.body;
 
     try {

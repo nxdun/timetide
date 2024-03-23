@@ -1,5 +1,5 @@
 /*
-*       This file is responsible for connecting to the MongoDB database.
+*       This file is responsible for connecting and disconnecting from the MongoDB database.
 *       Returns a connection object if the connection is successful.
 *       Logs an error if the connection fails..
 */
@@ -9,8 +9,9 @@ const Logger = require('./logger.js');
 require('dotenv').config();
 let database;
 
+// Connect to the database
 const connect = async () => {
-    const uri = process.env.MONGOSTRING_TEST;
+    const uri = process.env.MONGOSTRING;
     if(database) return;
 
     mongoose.connect(uri)
@@ -24,5 +25,18 @@ const connect = async () => {
 
 };
 
+// Disconnect from the database
+const disconnect = async () => {
+    if(!database) return;
 
-module.exports = connect;
+    mongoose.disconnect()
+    .then(() => {
+        Logger.info('Database connection closed');
+    })
+    .catch((error) => {
+        Logger.error(error);
+    })
+}
+
+
+module.exports = {connect, disconnect};
