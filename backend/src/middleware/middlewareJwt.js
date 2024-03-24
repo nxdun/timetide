@@ -1,3 +1,8 @@
+/*
+*   @desc: Middleware to verify the JWT token
+*   @param: request, response, next
+*   @return: JSON object
+*/
 const jwt = require('jsonwebtoken');
 const logger = require('../config/logger');
 require('dotenv').config();

@@ -16,7 +16,7 @@ async function getBooking(req, res, next) {
         res.booking = booking;
     } catch (error) {
         logger.error('[bookingsRoutes] get request failed with error: ' + error.message);
-        return res.status(500).json({ message: " :[  1Looks Like Something bad happening in Server" });
+        return res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
     }
     next();
 }
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
         res.json(bookings);
     } catch (error) {
         logger.error('[bookingsRoutes] get request failed with error: ' + error.message);
-        res.status(500).json({ message: " :[  2Looks Like Something bad happening in Server" });
+        res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
     }
 });
 
@@ -39,7 +39,7 @@ router.get('/:id', getBooking, (req, res) => {
     res.status(200).json(res.booking);
     }catch (error) {
         logger.error('[bookingsRoutes] get request failed with error: ' + error.message);
-        res.status(500).json({ message: " :[  3Looks Like Something bad happening in Server" });
+        res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
     }
 });
 
@@ -77,7 +77,7 @@ router.post('/', async (req, res) => {
 
     } catch (error) {
         logger.error('[bookingsRoutes] post request failed with error: ' + error.message);
-        res.status(400).json({ message: " :[  4Looks Like Something bad happening in Server" });
+        res.status(400).json({ message: " :[  Looks Like Something bad happening in Server" });
     }
 });
 

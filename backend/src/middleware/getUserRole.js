@@ -1,3 +1,10 @@
+/*
+*   @desc: middleware to get user role from the database
+*   @param: request, response, next
+*   @return: JSON object
+*/
+
+
 const UserRoles = require('../models/userRolesSchema');
 const logger = require('../config/logger.js');
 

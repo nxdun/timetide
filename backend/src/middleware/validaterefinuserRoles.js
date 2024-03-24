@@ -1,3 +1,9 @@
+/*
+*   @desc: Middleware to validate refObject in user roles
+*   @param: request, response, next
+*   @return: JSON object
+*/
+
 const Student = require('../models/studentSchema');
 const Lecturer = require('../models/lecturerSchema');
 const logger = require('../config/logger.js');

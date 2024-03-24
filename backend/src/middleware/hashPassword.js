@@ -1,3 +1,9 @@
+/*
+*   @desc: hash the password before saving it to the database
+*   @param: request, response, next
+*   @return:Replaced password with the hashed password
+*/
+
 const bcrypt = require('bcryptjs');
 
 async function hashPassword(req, res, next) {

@@ -1,4 +1,11 @@
+/*
+*   @desc: middleware function to get student by id
+*   @param: request, response, next
+*   @return: JSON object
+*/
+
 const Student = require('../models/studentSchema');
+const logger = require('../config/logger');
 
 async function getStudent(req, res, next) {
     try {

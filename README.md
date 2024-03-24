@@ -1,7 +1,24 @@
-# TimeTide
-⭐ [Link to API Documentation](https://documenter.getpostman.com/view/28802704/2sA35BbPtc)</br>
-⭐ [Link to all diagrams](https://rentry.co/diagramsforaf)
 
+#  🧭TimeTide 
+
+
+⭐ [Link to API Documentation](https://documenter.getpostman.com/view/28802704/2sA35BbPtc)</br>
+⭐ [Link to all diagrams](https://rentry.co/diagramsforaf)</br>
+⭐ [security test results](https://rentry.co/burptestresults)
+
+## Table of Contents
+
+- [🧭TimeTide](#timetide)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [How-to-Run-Tests](#how-to-run-tests)
+  - [Setting-enviroment-variables](#setting-enviroment-variables)
+  - [Usage](#usage)
+  - [Problems-Faced](#problems-faced)
+  - [Security-Test](#security-test)
+  - [License](#license)
+  - [Contact](#contact)
 ## Description
 
 TimeTide is a backend API designed for seamlessly managing university timetables. It provides
@@ -21,7 +38,7 @@ To install TimeTide, follow these steps:
 4. Set up environment variables in a `.env` file (Place .env File On Backend Folder)
 5. Start the server using `npm run dev`(Path:backend).
 
-## How to Run Tests
+## How-to-Run-Tests
 - Clone the repository from GitHub
 - `cd backend`:go to Backend folder
 - Create `.env` File in there  and set all enviroment variables
@@ -29,7 +46,7 @@ To install TimeTide, follow these steps:
 -  `npm run test1 `:Runs all Unit Tests
 -  `npm run test2 `:Runs all Unit + Intergration Tests
 
-## Setting enviroment variables
+## Setting-enviroment-variables
 ⭐ [My .env File](https://drive.google.com/file/d/1QeHdHceKwxdHtbQRAgK6_OBljQ6y6wFk/view?usp=drive_link)
 
 - `PORT`: (Specify the port number your server will run on)
@@ -56,7 +73,7 @@ POSTMAN BACKEND DOCUMENTATION : [Link to Postman Backend Documentation]([>>](htt
 Ensure you have proper authentication tokens to access protected endpoints.
 
 
-## Problems Faced
+## Problems-Faced
 
 Problems that have been addressed:
 
@@ -66,10 +83,9 @@ Problems that have been addressed:
 		FIX: Used supertest For Intergration Testing
 
 
-## Security Test
+## Security-Test
 
 Used Burp Suite to Check Security vulnerability
-[test results]()
 - Found out TimeTide is vulnerable for XSS attacks</br>
 FIX:
 	- `npm install helmet` : installed helmet npm package and set important security headers "`X-XSS-Protection: 1; mode=block`,`X-Content-Type-Options: nosniff`, `Strict-Transport-Security: max-age=63072000; includeSubDomain`...)
