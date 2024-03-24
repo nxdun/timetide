@@ -5,7 +5,7 @@ const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
 const jwtMiddleware = require("./middleware/middlewareJwt.js");
 
-const {connect, disconnect} = require("./config/dbconnection.js");
+const {connect} = require("./config/dbconnection.js");
 const logger = require("./config/logger.js");
 const serviceRouter = require("./routes/serviceRouter.js");
 const authRouter = require("./routes/authRouter.js");
