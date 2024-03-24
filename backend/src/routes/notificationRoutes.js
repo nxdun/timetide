@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
     //userrole management
     //only students not allowed to access
     //sepreate routes avilable for students
-    if (req.userRole == 'student') {
+    if (req.user.role == 'student') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
 
@@ -42,7 +42,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', getNotification, (req, res) => {
     //userrole management
     //only students not allowed to access
-    if (req.userRole == 'student') {
+    if (req.user.role == 'student') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     res.json(res.notification);
@@ -50,10 +50,11 @@ router.get('/:id', getNotification, (req, res) => {
 
 // CREATE a new notification
 router.post('/', async (req, res) => {
+    
     //userrole management
     //only students not allowed to access
-    if (req.userRole == 'student') {
-        return res.status(401).json({ message: 'Unauthorized' });
+    if (req.user.role == 'student') {
+        return res.status(401).json({ message: `Unauthorized access to create notification ${req.user.role}` });
     }
 
     // Check if the user exists
@@ -79,7 +80,7 @@ router.post('/', async (req, res) => {
 router.patch('/:id', getNotification, async (req, res) => {
     //userrole management
     //only students not allowed to access
-    if (req.userRole == 'student') {
+    if (req.user.role == 'student') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
 
@@ -102,7 +103,7 @@ router.patch('/:id', getNotification, async (req, res) => {
 router.delete('/:id', getNotification, async (req, res) => {
     //userrole management
     //only students not allowed to access
-    if (req.userRole == 'student') {
+    if (req.user.role == 'student') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     

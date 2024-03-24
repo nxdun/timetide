@@ -1,107 +1,115 @@
-
 # TimeTide
+[Link to Postman Backend Documentation](https://documenter.getpostman.com/view/28802704/2sA35BbPtc)</br>
+[Link to all diagrams](https://documenter.getpostman.com/view/28802704/2sA35BbPtc)
 
 ## Description
 
-A brief description of the project.
+TimeTide is a backend API designed for seamlessly managing university timetables. It provides
+- Endpoints for CRUD operations on various resources related to timetables
+- Endpoints for user authentication operations
+- Endpoints for generating services related to timetables
+- Endpoint for Notification handler
+...
 
 ## Installation
 
-Instructions on how to install and run the project.
+To install TimeTide, follow these steps:
+
+1. Clone the repository from GitHub.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Set up environment variables in a `.env` file(Required)
+5. Start the server using `npm run dev`(Path:backend).
+
+## Setting enviroment variables
+
+- `PORT`: (Specify the port number your server will run on)
+- `MONGOSTRING`: "mongodb+srv:// "
+- `JWT_SECRET`: (Specify your JWT secret key)
+- `ADMIN_USERNAME`: (Specify admin username)(only for First time use)
+	- Refer `POST : /v1/auth/register` in Documentation
+	- remove this enviroment varaible after use
+	- you can have many admins but specify them like this first to add another admin
+- `ADMIN_PASSWORD`: (Specify admin password)(onlyfor First time use)
 
 ## Usage
 
-Instructions on how to use the project.
+After installation, you can use the following endpoints:
 
-## problems
-problems have been addressed
-1.mongodb schema designing : circular reference between 
+POSTMAN BACKEND DOCUMENTATION : [Link to Postman Backend Documentation]([>>](https://documenter.getpostman.com/view/28802704/2sA35BbPtc)) 
+
+- `/v1/api`: Endpoints for CRUD operations on timetables and related resources.
+- `/v1/auth`: Endpoints for user authentication operations.
+- `/v1/generate`: Endpoints for generating services related to timetables.
+- `/v1/notifications`: Endpoints for handling notifications.
+
+Ensure you have proper authentication tokens to access protected endpoints.
+
+## Problems
+
+Problems that have been addressed:
+
+1. MongoDB schema designing: circular reference between tables
+		FIX: Mongodb Schema is loosely coupled
+2. MongoDB schema designing: circular reference between tables
+		FIX: Mongodb Schema is loosely coupled
 
 ## Contributing
 
-Guidelines for contributing to the project.
+Contributions to TimeTide are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Test your changes thoroughly.
+5. Submit a pull request.
 
 ## License
 
-Information about the project's license.
+TimeTide is licensed under the ISC License. See [LICENSE](LICENSE) for more information.
 
 ## Contact
 
-Contact information for the project maintainer.
+For any inquiries or assistance, feel free to contact the project maintainer:
 
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/MhkFIDKy)
+- Name: Lakshan S N
+- Email: [inbox.nadun@gmail.com](mailto:inbox.nadun@gmail.com)
+- GitHub: [github.com/nxdun](https://github.com/nxdun)
 
-student can view timetable for selected module
-time table is weekly basis, not day to day basis
 
+## Requirements
 
-// UserRoles Collection
-UserRoles: {
-  _id,
-  username: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  role: { type: String, enum: ['student', 'lecturer', 'admin'], required: true },
-  refObject: { type: ObjectId, refPath: 'role' }
+```json
+{
+  "name": "timetide",
+  "version": "1.0.0",
+  "description": "backend API for seamlessly managing university timetables",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "author": "lakshan s n",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-jwt": "^8.4.1",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.2",
+    "pino-multi-stream": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "pino": "^8.19.0",
+    "pino-pretty": "^10.3.1"
+  }
 }
-
-// Lecturer Collection
-Lecturer: {
-  _id,
-  honour: String,
-  name: { type: String, required: true },
-  contact_mail: String,
-  contact_no: String
-}
-
-// Student Collection
-Student: {
-  _id,
-  name: { type: String, required: true },
-  regnb: { type: String, required: true },
-  enrolledCourses: [{ type: ObjectId, ref: 'Course' }]
-}
-
-// Course Collection
-Course: {
-  _id,
-  Ccode: { type: String, required: true },
-  description: String,
-  credits: Number,
-  lecturerobjects: [{ type: ObjectId, ref: 'Lecturer' }],
-  schedule: [{ type: ObjectId, ref: 'Bookings' }]
-}
-
-// Hall Collection
-Hall: {
-  _id,
-  hallid: { type: String, required: true },
-  buildingName: { type: String, required: true },
-  floor: Number,
-  resources: [{ type: ObjectId, ref: 'Resource' }]
-}
-
-// Resource Collection
-Resource: {
-  _id,
-  name: { type: String, required: true },
-  description: String,
-  isAvailable: { type: Boolean, default: true }
-}
-
-// Bookings Collection
-Bookings: {
-  _id,
-  StartTime: { type: Date, required: true },
-  EndTime: { type: Date, required: true },
-  BookedDay: { type: Date, required: true },
-  Course: { type: ObjectId, ref: 'Course', required: true },
-  Type: { type: String, enum: ['lab', 'lec', 'tute'], required: true },
-  hall: { type: ObjectId, ref: 'Hall', required: true }
-}
-
-// Notification Collection
-Notification: {
-  _id,
-  userID: { type: ObjectId, ref: 'UserRoles', required: true },
-  message: String
-}
+```

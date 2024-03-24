@@ -144,13 +144,9 @@ router.patch('/:id', getUserRole, validateRefObject, hashPassword, async (req, r
 });
 
 // DELETE a user role
-router.delete('/:id', getUserRole, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     //role check
     //no one csan delete admin user role
-    if (res.userRole.role == 'admin') {
-        logger.error(`[userRolesRoutes] Someone trying to delete admin role ${req.user}` );
-        return res.status(401).json({ message: " :[  You are not authorized to perform this operation" });
-    }
     //only admin and lecturer can delete user role
     if (req.user.role != 'admin' && req.user.role != 'lecturer') {
         logger.error(`[userRolesRoutes] Unauthrized operation requst ${req.user}` );
@@ -168,7 +164,7 @@ router.delete('/:id', getUserRole, async (req, res) => {
         res.json({ message: 'User role deleted' });
     } catch (error) {
         logger.error('[userRolesRoutes] Delete request failed with error: ' + error.message);
-        res.status(500).json({ message: " :[  Looks Like Something bad happening in Server" });
+        res.status(500).json({ message: " :[  Looks Like input not allowed" });
     }
 });
 

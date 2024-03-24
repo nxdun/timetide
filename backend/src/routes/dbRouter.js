@@ -19,9 +19,9 @@ router.use('/userroles',jwtMiddleware, userRolesRoutes);
 router.use('/students',jwtMiddleware, studentRoutes); //student creation no need to be authenticated but other operations need to be authenticated
 router.use('/courses',jwtMiddleware, courseRoutes);
 router.use('/halls',jwtMiddleware, hallRoutes);
+router.use('/notifications', jwtMiddleware,notificationRoutes);
 router.use('/resources',jwtMiddleware, resourceRoutes);
 router.use('/bookings',jwtMiddleware, bookingsRoutes);
-router.use('/notifications', jwtMiddleware,notificationRoutes);
 router.use('/lecturers',jwtMiddleware, lecturerRoutes);
 
 

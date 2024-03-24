@@ -599,10 +599,10 @@ describe("[U + I] courseRoutes.JS tests", () => {
           Ccode: "c1",
           description: "course1",
           credits: 3,
-          lecturerobjects: ["65f95b96d239b95696d4e909"],//incorrect id
+          lecturerobjects: ["65f95b96d239b95696d4e909"],//correct id
           schedule: [
-            "65fb0fc26a06d629d70829f0",
-            "65fb0fe86a06d629d70829f4", 
+            "65fba8d8658b10d843e0c97c",
+            "65fbbbc749b59e29fd39277f", 
         ]
         });
       postedCid = res.body._id;

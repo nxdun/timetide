@@ -438,12 +438,12 @@ describe("[U] Middleware Folder", () => {
         //check if the student is found
     });
 
-    it("should return 500 if there is error...", async () => {
+    it("should return 400 if there is error in id ...", async () => {
   
         //create request with parameter of id
         const req = {
             body: {
-                role: 'lecturer',
+                role: 'lecturer3',
             }
         };
 
@@ -459,9 +459,9 @@ describe("[U] Middleware Folder", () => {
         //call the middleware function
         try{
         await validateRefObject(req, res, next);
+        expect(res.status.calledWith(400)).to.be.true;     
         }
         catch(error){ 
-            expect(res.status.calledWith(500)).to.be.true;     
         }
     });
 

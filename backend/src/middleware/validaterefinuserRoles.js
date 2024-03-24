@@ -3,10 +3,14 @@ const Lecturer = require('../models/lecturerSchema');
 const logger = require('../config/logger.js');
 require('dotenv').config();
 
-
 async function validateRefObject(req, res, next) {
     logger.info('validateRefObject middleware called');
     const { role, refObject } = req.body;
+
+    //check if refObject is a valid ObjectId
+    if (!refObject.match(/^[0-9a-fA-F]{24}$/)) {
+        return res.status(400).json({ message: 'Sorry user reference is invalid' });
+    }
 
     try {
         // Check if refObject exists and matches the user's role
@@ -22,8 +26,8 @@ async function validateRefObject(req, res, next) {
                 req.refObject = lecturer;
                 return next();
             }
-                return res.status(400).json({ message: 'Sorry user reference is invalid' });
-            
+        }else{
+            return res.status(400).json({ message: 'Sorry user reference is invalid' });
         }
 
     } catch (error) {

@@ -48,7 +48,7 @@ router.get('/:id', getHall, (req, res) => {
 router.post('/', async (req, res) => {
     //userrole management
     //only admin allowed to access
-    if (req.userRole != 'admin') {
+    if (req.user.role != 'admin') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     try {
@@ -91,7 +91,7 @@ router.post('/', async (req, res) => {
 router.patch('/:id', getHall, async (req, res) => {
     //userrole management
     //only admin allowed to access
-    if (req.userRole != 'admin') {
+    if (req.user.role != 'admin') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     try {
@@ -142,7 +142,7 @@ router.patch('/:id', getHall, async (req, res) => {
 router.delete('/:id', getHall, async (req, res) => {
     //userrole management
     //only admin allowed to access
-    if (req.userRole != 'admin') {
+    if (req.user.role != 'admin') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     logger.debug('[hallRoutes] delete hall request received with id: ' + req.params.id);

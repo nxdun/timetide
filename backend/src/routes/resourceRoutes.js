@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Resource = require('../models/resourceSchema');
+const logger = require('../config/logger.js');
 
 // Middleware function to get resource by ID
 async function getResource(req, res, next) {
@@ -36,7 +37,8 @@ router.get('/:id', getResource, (req, res) => {
 router.post('/', async (req, res) => {
     //userrole management
     //only admin allowed to access
-    if (req.userRole != 'admin') {
+    if (req.user.role != 'admin') {
+        logger.error(`Unauthorized access to create notification ${JSON.stringify(req.user.role)}`)
         return res.status(401).json({ message: 'Unauthorized' });
     }
     const resource = new Resource({
@@ -57,7 +59,7 @@ router.post('/', async (req, res) => {
 router.patch('/:id', getResource, async (req, res) => {
     //userrole management
     //only admin allowed to access
-    if (req.userRole != 'admin') {
+    if (req.user.role != 'admin') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     if (req.body.name != null) {
@@ -82,7 +84,7 @@ router.patch('/:id', getResource, async (req, res) => {
 router.delete('/:id', getResource, async (req, res) => {
     //userrole management
     //only admin allowed to access
-    if (req.userRole != 'admin') {
+    if (req.user.role != 'admin') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     try {

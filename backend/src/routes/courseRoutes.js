@@ -59,7 +59,7 @@ router.get("/:id", getCourse, (req, res) => {
 
 router.post('/', async (req, res) => {
   //students not allowed to access
-  if (req.userRole == 'student') {
+  if (req.user.role == 'student') {
       return res.status(401).json({ message: 'Unauthorized' });
   }
 
@@ -142,7 +142,7 @@ router.post('/', async (req, res) => {
 // UPDATE a course
 router.patch("/:id", getCourse, async (req, res) => {
   //students not allowed to access
-  if (req.userRole == 'student') {
+  if (req.user.role == 'student') {
       return res.status(401).json({ message: 'Unauthorized' });
   }
 
@@ -240,7 +240,7 @@ router.patch("/:id", getCourse, async (req, res) => {
 // DELETE a course
 router.delete("/:id", getCourse, async (req, res) => {
   //students not allowed to access
-  if (req.userRole == 'student') {
+  if (req.user.role == 'student') {
       return res.status(401).json({ message: 'Unauthorized' });
   }
   

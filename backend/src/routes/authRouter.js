@@ -41,11 +41,11 @@ router.post('/login', getUserRole, async (req, res) => {
         logger.info(`Login successful for username: ${username} with role: ${userRole.role}`);
         
         // Generate JWT token
-        const token = jwt.sign({ username: userRole.username, role: userRole.role, ref: userRole, id:userRole._id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRY });
+        const token = jwt.sign({ username: userRole.username, role: userRole.role, ref: userRole, id:userRole._id }, process.env.JWT_SECRET, { expiresIn: '5h'});
         //set cookie to token
         res.cookie('refobj', userRole.refObject);
         res.cookie('auth', token);
-        // Send JWT token in response
+        // Send JWT token in response.
         //TODO:REMOVE THE TOKEN FROM RESPONSE
         res.status(200).json({ message: 'Login successful' });
 
@@ -188,6 +188,7 @@ router.post('/forgetpassword', async (req, res) => {
     if (userRole.role !== req.body.role) {
         return res.status(400).json({ message: 'Invalid role' });
     }
+    
     //hash the new password
     const hashedPassword = await bcrypt.hash(req.body.newpassword, 10);
     //update the password

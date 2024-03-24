@@ -226,3 +226,5 @@
 {"level":30,"time":1711211090579,"pid":8360,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 65ff0252dc977364895a5f64"}
 {"level":50,"time":1711211090585,"pid":8360,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
 {"level":30,"time":1711211090588,"pid":8360,"hostname":"NADUN","msg":"[poop]/v1/api/courses/65ff0252dc977364895a5f64"}
+{"level":30,"time":1711213276033,"pid":19096,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1711213277729,"pid":19096,"hostname":"NADUN","msg":"Database connection established"}

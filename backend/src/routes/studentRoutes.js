@@ -8,6 +8,7 @@ const getStudent = require('../middleware/getStuById');
 
 // Get all students
 router.get('/',  async (req, res) => {
+    logger.info(`User {${req.user}} requested to get all students`);
     //roles: admin, lecturer
     if (req.user.role === 'student') {
         logger.error(`Unauthorized access to students by {${req.user}}`);
@@ -24,6 +25,7 @@ router.get('/',  async (req, res) => {
 
 // Get a single student
 router.get('/:id', getStudent, (req, res) => {
+    
     //roles: admin, lecturer   
     if (req.user.role === 'student') {
         logger.error(`Unauthorized access to student by {${req.user}}`);
@@ -88,12 +90,14 @@ router.post('/', async (req, res) => {
 
 // Update a student
 router.patch('/:id', getStudent, async (req, res) => {
-    //roles: admin, lecturer
+    // Check if user has the appropriate role
     if (req.user.role === 'student') {
         logger.error(`Unauthorized access to update student by {${req.user}}`);
         return res.status(403).json({ message: 'Unauthorized' });
     }
+    
     try {
+        // Update student details if provided in the request body
         if (req.body.name != null) {
             res.student.name = req.body.name;
         }
@@ -101,28 +105,27 @@ router.patch('/:id', getStudent, async (req, res) => {
             res.student.regnb = req.body.regnb;
         }
         if (req.body.enrolledCourses != null) {
-            // Validate if all enrolled courses are valid ObjectId strings
+            // Validate enrolled course IDs
             const areAllValidIds = req.body.enrolledCourses.every(courseId => mongoose.Types.ObjectId.isValid(courseId));
             if (!areAllValidIds) {
                 return res.status(400).json({ message: 'One or more enrolled courses have invalid IDs.' });
             }
 
-            // Validate if all enrolled courses exist in the database
-            const coursesExist = await Promise.all(req.body.enrolledCourses.map(async courseId => {
-                const course = await Course.findById(courseId);
-                return course !== null; // Return true if course exists, false otherwise
-            }));
-            
-            if (coursesExist.includes(false)) {
+            // Retrieve course documents from the database
+            const courses = await Course.find({ _id: { $in: req.body.enrolledCourses } });
+            const existingCourseIds = courses.map(course => course._id.toString());
+
+            // Check if all provided course IDs exist
+            const allCoursesExist = req.body.enrolledCourses.every(courseId => existingCourseIds.includes(courseId));
+            if (!allCoursesExist) {
                 return res.status(400).json({ message: 'One or more enrolled courses do not exist.' });
             }
 
-            // Check for duplicate course IDs
-            const uniqueEnrolledCourses = Array.from(new Set(req.body.enrolledCourses));
-            
-            res.student.enrolledCourses = uniqueEnrolledCourses;
+            // Update enrolled courses
+            //res.student.enrolledCourses = existingCourseIds;
         }
         
+        // Save the updated student object
         const updatedStudent = await res.student.save();
         res.json(updatedStudent);
     } catch (error) {

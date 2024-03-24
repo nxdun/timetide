@@ -6,8 +6,18 @@ const Course = require("../models/courseSchema.js");
 const Booking = require("../models/bookingSchema.js");
 const Lecturer = require("../models/lecturerSchema.js");
 const Hall = require("../models/hallSchema.js");
+const mongoose = require("mongoose");
 
+//send student id as a parameter
 router.get("/weekly/:studentId", async (req, res) => {
+
+  //parameeter validation
+  if (!req.params.studentId) {
+    return res.status(400).json({ message: "Student id is required" });
+  }
+  if (req.params.studentId.length !== 24 || !mongoose.Types.ObjectId.isValid(req.params.studentId)) {
+    return res.status(400).json({ message: "Invalid student id" });
+  }
   try {
     const studentId = req.params.studentId;
     logger.info(
@@ -25,15 +35,8 @@ router.get("/weekly/:studentId", async (req, res) => {
     const enrolledCourses = student.enrolledCourses;
 
     // Constructing timetable
-    let timetable = {
-      monday: [],
-      tuesday: [],
-      wednesday: [],
-      thursday: [],
-      friday: [],
-      saturday: [],
-      sunday: [],
-    };
+    let timetable = {};
+    //loop through each course inside student's enrolled courses
     for (const courseId of enrolledCourses) {
       logger.info("  ..for loop  schedules  : courseId " + courseId);
       const course = await Course.findById(courseId);
@@ -50,7 +53,9 @@ router.get("/weekly/:studentId", async (req, res) => {
 
       const scheduleId = course.schedule;
       logger.info("  ..for loop started " + scheduleId);
+      //loop through each schedule inside course's schedule
       for (const id of scheduleId) {
+        
         logger.info("   ...for loop schedules   : scheduleId " + scheduleId);
         const schedule = await Booking.findById(id);
         logger.info(

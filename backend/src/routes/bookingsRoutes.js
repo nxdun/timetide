@@ -47,7 +47,7 @@ router.get('/:id', getBooking, (req, res) => {
 router.post('/', async (req, res) => {
     //userrole management
     //only students not allowed to access
-    if (req.userRole == 'student') {
+    if (req.user.role == 'student') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
 
@@ -77,7 +77,7 @@ router.post('/', async (req, res) => {
 
     } catch (error) {
         logger.error('[bookingsRoutes] post request failed with error: ' + error.message);
-        res.status(40).json({ message: " :[  4Looks Like Something bad happening in Server" });
+        res.status(400).json({ message: " :[  4Looks Like Something bad happening in Server" });
     }
 });
 
@@ -85,7 +85,7 @@ router.post('/', async (req, res) => {
 router.patch('/:id', getBooking, async (req, res) => {
     //userrole management
     //only students not allowed to access
-    if (req.userRole == 'student') {
+    if (req.user.role == 'student') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     logger.debug('[bookingsRoutes] patch request received with id: ' + req.params.id + ' and body: ' + JSON.stringify(req.body));
@@ -133,7 +133,7 @@ router.patch('/:id', getBooking, async (req, res) => {
 router.delete('/:id', getBooking, async (req, res) => {
     //userrole management
     //only students not allowed to access
-    if (req.userRole == 'student') {
+    if (req.user.role == 'student') {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     
