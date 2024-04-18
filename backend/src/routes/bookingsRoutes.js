@@ -23,6 +23,12 @@ async function getBooking(req, res, next) {
 
 // GET all bookings
 router.get('/', async (req, res) => {
+
+    //userrole management
+    //only students not allowed to access
+    if (req.user.role == 'student') {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
     logger.debug('[bookingsRoutes] get all bookings request received');
     try {
         const bookings = await Bookings.find();

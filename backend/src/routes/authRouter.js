@@ -56,7 +56,6 @@ router.post('/login', getUserRole, async (req, res) => {
 });
 
 
-
 //can register students
 //student username should match Student schemas regnb
 //if lecturer give regid, student can register lecturer 
