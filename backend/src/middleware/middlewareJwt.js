@@ -9,16 +9,18 @@ require('dotenv').config();
 const secret = process.env.JWT_SECRET;
 
 function jwtAuth(req, res, next) {
+
+    //takes cookie to verify
     const token = req.cookies.auth;
     if (!token) {
+        logger.error('Access denied. No token provided by client');
         return res.status(401).json({ message: 'Access denied. No token provided.' });
     }
 
     try {
         const decoded = jwt.verify(token, secret);
         // Add user from payload
-        req.user = decoded;
-        
+        req.user = decoded;;
         next();
     } catch (error) {
         console.log(error);

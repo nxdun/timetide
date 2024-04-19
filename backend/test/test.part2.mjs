@@ -3,6 +3,7 @@ import supertest from "supertest";
 import { expect } from "chai";
 import UserRoles from "../src/models/userRolesSchema.js";
 import logger from "../src/config/logger.js";
+
 let authCookie; // To store the 'auth' cookie
 const request = supertest(app);
 describe("[U + I]  AuthRouter.js  Tests", () => {
@@ -291,222 +292,6 @@ describe("[U + I]  AuthRouter.js Integration Tests", () => {
   });
 });
 
-describe("[U + I] bookingsRoutes.js tests", () => {
-  //taking admin cookie
-
-  before(async () => {
-    const res = await request
-      .post("/v1/auth/login/")
-      .send({ username: "adminzila", password: "godzila", role: "admin" });
-
-    // Retrieve the cookies from the response headers
-    const cookies = res.headers["set-cookie"];
-    // Find and extract the 'auth' cookie
-    authCookie = cookies
-      .find((cookie) => cookie.startsWith("auth"))
-      .split(";")[0];
-    logger.info(`[test2] authCookie: ${authCookie}`);
-  });
-
-  describe("GET /v1/api/bookings/", () => {
-    it("should return 200 and all bookings", async () => {
-      // Make the request and include the auth cookie in the headers
-      const res = await request
-        .get("/v1/api/bookings/")
-        .set("Cookie", authCookie);
-
-      expect(res.statusCode).to.equal(200);
-    });
-  });
-
-  let postedId;
-
-  describe("POST /v1/api/bookings/ ", () => {
-    it("should return 400 Hall not found", async () => {
-      const res = await request
-        .post("/v1/api/bookings/")
-        .set("Cookie", authCookie)
-        .send({
-          StartTime: "2020-12-10T12:00:00.000Z",
-          EndTime: "2020-12-12T14:00:00.000Z",
-          BookedDay: "2020-12-12",
-          Course: "65faebeb967f8323ca27f1d8",
-          Type: "lecture",
-          hall: "99fb0b026a06d629d70829c7", //incorrect id
-        });
-
-      expect(res.statusCode).to.equal(400);
-    });
-
-    it("should return 201 Success", async () => {
-      const res = await request
-        .post("/v1/api/bookings/")
-        .set("Cookie", authCookie)
-        .send({
-          StartTime: "2000-12-10T12:00:00.000Z",
-          EndTime: "2000-12-12T14:00:00.000Z",
-          BookedDay: "2000-12-12",
-          Course: "65faebeb967f8323ca27f1d8",
-          Type: "Lecture",
-          hall: "65fb0b026a06d629d70829c7", //correct id
-        });
-
-      postedId = res.body._id;
-      logger.info(`[ttest2] postedId: ${postedId}`);
-
-      expect(res.statusCode).to.equal(201);
-    });
-
-    it("should return 400 Invalid Course id", async () => {
-      const res = await request
-        .post("/v1/api/bookings/")
-        .set("Cookie", authCookie)
-        .send({
-          StartTime: "2020-12-10T12:00:00.000Z",
-          EndTime: "2020-12-12T14:00:00.000Z",
-          BookedDay: "2020-12-12",
-          Course: "65faebeb967f8323ca27f1a9", //incorrect id
-          Type: "Lecture",
-          hall: "65fb0b0c6a06d629d70829c9",
-        });
-
-      expect(res.statusCode).to.equal(400);
-    });
-
-    it("should return 400 and all fields required", async () => {
-      const res = await request
-        .post("/v1/api/bookings/")
-        .set("Cookie", authCookie)
-        .send({
-          StartTime: "2020-12-10T12:00:00.000Z",
-          EndTime: "2020-12-12T14:00:00.000Z",
-          BookedDay: "2020-12-12",
-          Course: "65faebeb967f8323ca27f1d8",
-          Type: "lecture",
-        });
-
-      expect(res.statusCode).to.equal(400);
-    });
-
-    it("should return 401 Unauthorized", async () => {
-      const res = await request.post("/v1/api/bookings/").send({
-        StartTime: "2020-12-10T12:00:00.000Z",
-        EndTime: "2020-12-12T14:00:00.000Z",
-        BookedDay: "2020-12-12",
-        Course: "65faebeb967f8323ca27f1d8",
-        Type: "lecture",
-        hall: "65fb0b0c6a06d629d70829c9",
-      });
-
-      expect(res.statusCode).to.equal(401);
-    });
-  });
-
-  describe("GET /v1/api/bookings/:id", () => {
-    it("should return 500 server error", async () => {
-      // Make the request and include the auth cookie in the headers
-      const res = await request
-        .get("/v1/api/bookings/5fb0b0c6a06d629d70829c9")
-        .set("Cookie", authCookie);
-
-      expect(res.statusCode).to.equal(500);
-    });
-
-    it("should return 200 and a booking", async () => {
-      // Make the request and include the auth cookie in the headers
-      const res = await request
-        .get("/v1/api/bookings/65faea667df21575d10c74b5")
-        .set("Cookie", authCookie);
-
-      expect(res.statusCode).to.equal(200);
-    });
-  });
-
-  describe("PATCH /v1/api/bookings/:id", () => {
-    it("should return 400 Hall not found", async () => {
-      const res = await request
-        .patch(`/v1/api/bookings/${postedId}`)
-        .set("Cookie", authCookie)
-        .send({
-          StartTime: "2000-12-10T12:00:00.000Z",
-          EndTime: "2000-12-12T14:00:00.000Z",
-          BookedDay: "2000-12-12",
-          Course: "66faebeb967f8323ca27f1d8",
-          Type: "Lecture",
-          hall: "65fb0b026a06d629d70829c7", //incorrect id
-        });
-
-      expect(res.statusCode).to.equal(400);
-    });
-
-    it("should return 200 Success", async () => {
-      const res = await request
-        .patch(`/v1/api/bookings/${postedId}`)
-        .set("Cookie", authCookie)
-        .send({
-          StartTime: "2000-12-10T12:00:00.000Z",
-          EndTime: "2000-12-12T15:00:00.000Z",
-          BookedDay: "2000-12-12",
-          Course: "65faebeb967f8323ca27f1d8",
-          Type: "Lecture",
-          hall: "65fb0b026a06d629d70829c7",
-        });
-
-      expect(res.statusCode).to.equal(200);
-    });
-
-    it("should return 400 Invalid Course id", async () => {
-      const res = await request
-        .patch(`/v1/api/bookings/${postedId}`)
-        .set("Cookie", authCookie)
-        .send({
-          StartTime: "2020-12-10T12:00:00.000Z",
-          EndTime: "2020-12-12T14:00:00.000Z",
-          BookedDay: "2020-12-12",
-          Course: "65fadbeb967f8323ca27f1d8", //incorrect id
-          Type: "Lecture",
-          hall: "65fb0b0c6a06d629d70829c9",
-        });
-
-      expect(res.statusCode).to.equal(400);
-    });
-
-    it("should return 400 and all fields required", async () => {
-      const res = await request
-        .patch(`/v1/api/bookings/${postedId}`)
-        .set("Cookie", authCookie)
-        .send({
-          StartTime: "2020-12-10T12:00:00.000Z",
-          EndTime: "2020-12-12T14:00:00.000Z",
-          BookedDay: "2020-12-12",
-          Type: "lecture",
-        });
-
-      expect(res.statusCode).to.equal(400);
-    });
-  });
-
-  describe("DELETE /v1/api/bookings/:id", () => {
-    it("should return 500 server error", async () => {
-      // Make the request and include the auth cookie in the headers
-      const res = await request
-        .delete("/v1/api/bookings/5fb0b0c6a06d629d70829c9")
-        .set("Cookie", authCookie);
-
-      expect(res.statusCode).to.equal(500);
-    });
-
-    it("should return 200 and a booking", async () => {
-      logger.info(`[poop]/v1/api/bookings/${postedId}`);
-      // Make the request and include the auth cookie in the headers
-      const res = await request
-        .delete(`/v1/api/bookings/${postedId}`)
-        .set("Cookie", authCookie);
-
-      expect(res.statusCode).to.equal(200);
-    });
-  });
-});
 
 describe("[U + I] courseRoutes.JS tests", () => {
   //taking admin cookie
@@ -1067,6 +852,223 @@ describe("[U + I] lecturerRoutes.JS tests", () => {
       // Make the request and include the auth cookie in the headers
       const res = await request
         .delete(`/v1/api/courses/${postedCid}`)
+        .set("Cookie", authCookie);
+
+      expect(res.statusCode).to.equal(200);
+    });
+  });
+});
+
+describe("[U + I] bookingsRoutes.js tests", () => {
+  //taking admin cookie
+
+  before(async () => {
+    const res = await request
+      .post("/v1/auth/login/")
+      .send({ username: "adminzila", password: "godzila", role: "admin" });
+
+    // Retrieve the cookies from the response headers
+    const cookies = res.headers["set-cookie"];
+    // Find and extract the 'auth' cookie
+    authCookie = cookies
+      .find((cookie) => cookie.startsWith("auth"))
+      .split(";")[0];
+    logger.info(`[test2] authCookie: ${authCookie}`);
+  });
+
+  describe("GET /v1/api/bookings/", () => {
+    it("should return 200 and all bookings", async () => {
+      // Make the request and include the auth cookie in the headers
+      const res = await request
+        .get("/v1/api/bookings/")
+        .set("Cookie", authCookie);
+
+      expect(res.statusCode).to.equal(200);
+    });
+  });
+
+  let postedId;
+
+  describe("POST /v1/api/bookings/ ", () => {
+    it("should return 400 Hall not found", async () => {
+      const res = await request
+        .post("/v1/api/bookings/")
+        .set("Cookie", authCookie)
+        .send({
+          StartTime: "2020-12-10T12:00:00.000Z",
+          EndTime: "2020-12-12T14:00:00.000Z",
+          BookedDay: "2020-12-12",
+          Course: "65faebeb967f8323ca27f1d8",
+          Type: "lecture",
+          hall: "99fb0b026a06d629d70829c7", //incorrect id
+        });
+
+      expect(res.statusCode).to.equal(400);
+    });
+
+    it("should return 201 Success", async () => {
+      const res = await request
+        .post("/v1/api/bookings/")
+        .set("Cookie", authCookie)
+        .send({
+          StartTime: "2000-12-10T12:00:00.000Z",
+          EndTime: "2000-12-12T14:00:00.000Z",
+          BookedDay: "2000-12-12",
+          Course: "65faebeb967f8323ca27f1d8",
+          Type: "Lecture",
+          hall: "65fb0b026a06d629d70829c7", //correct id
+        });
+
+      postedId = res.body._id;
+      logger.info(`[ttest2] postedId: ${postedId}`);
+
+      expect(res.statusCode).to.equal(201);
+    });
+
+    it("should return 400 Invalid Course id", async () => {
+      const res = await request
+        .post("/v1/api/bookings/")
+        .set("Cookie", authCookie)
+        .send({
+          StartTime: "2020-12-10T12:00:00.000Z",
+          EndTime: "2020-12-12T14:00:00.000Z",
+          BookedDay: "2020-12-12",
+          Course: "65faebeb967f8323ca27f1a9", //incorrect id
+          Type: "Lecture",
+          hall: "65fb0b0c6a06d629d70829c9",
+        });
+
+      expect(res.statusCode).to.equal(400);
+    });
+
+    it("should return 400 and all fields required", async () => {
+      const res = await request
+        .post("/v1/api/bookings/")
+        .set("Cookie", authCookie)
+        .send({
+          StartTime: "2020-12-10T12:00:00.000Z",
+          EndTime: "2020-12-12T14:00:00.000Z",
+          BookedDay: "2020-12-12",
+          Course: "65faebeb967f8323ca27f1d8",
+          Type: "lecture",
+        });
+
+      expect(res.statusCode).to.equal(400);
+    });
+
+    it("should return 401 Unauthorized", async () => {
+      const res = await request.post("/v1/api/bookings/").send({
+        StartTime: "2020-12-10T12:00:00.000Z",
+        EndTime: "2020-12-12T14:00:00.000Z",
+        BookedDay: "2020-12-12",
+        Course: "65faebeb967f8323ca27f1d8",
+        Type: "lecture",
+        hall: "65fb0b0c6a06d629d70829c9",
+      });
+
+      expect(res.statusCode).to.equal(401);
+    });
+  });
+
+  describe("GET /v1/api/bookings/:id", () => {
+    it("should return 500 server error", async () => {
+      // Make the request and include the auth cookie in the headers
+      const res = await request
+        .get("/v1/api/bookings/5fb0b0c6a06d629d70829c9")
+        .set("Cookie", authCookie);
+
+      expect(res.statusCode).to.equal(500);
+    });
+
+    it("should return 200 and a booking", async () => {
+      // Make the request and include the auth cookie in the headers
+      const res = await request
+        .get("/v1/api/bookings/65faea667df21575d10c74b5")
+        .set("Cookie", authCookie);
+
+      expect(res.statusCode).to.equal(200);
+    });
+  });
+
+  describe("PATCH /v1/api/bookings/:id", () => {
+    it("should return 400 Hall not found", async () => {
+      const res = await request
+        .patch(`/v1/api/bookings/${postedId}`)
+        .set("Cookie", authCookie)
+        .send({
+          StartTime: "2000-12-10T12:00:00.000Z",
+          EndTime: "2000-12-12T14:00:00.000Z",
+          BookedDay: "2000-12-12",
+          Course: "66faebeb967f8323ca27f1d8",
+          Type: "Lecture",
+          hall: "65fb0b026a06d629d70829c7", //incorrect id
+        });
+
+      expect(res.statusCode).to.equal(400);
+    });
+
+    it("should return 200 Success", async () => {
+      const res = await request
+        .patch(`/v1/api/bookings/${postedId}`)
+        .set("Cookie", authCookie)
+        .send({
+          StartTime: "2000-12-10T12:00:00.000Z",
+          EndTime: "2000-12-12T15:00:00.000Z",
+          BookedDay: "2000-12-12",
+          Course: "65faebeb967f8323ca27f1d8",
+          Type: "Lecture",
+          hall: "65fb0b026a06d629d70829c7",
+        });
+
+      expect(res.statusCode).to.equal(200);
+    });
+
+    it("should return 400 Invalid Course id", async () => {
+      const res = await request
+        .patch(`/v1/api/bookings/${postedId}`)
+        .set("Cookie", authCookie)
+        .send({
+          StartTime: "2020-12-10T12:00:00.000Z",
+          EndTime: "2020-12-12T14:00:00.000Z",
+          BookedDay: "2020-12-12",
+          Course: "65fadbeb967f8323ca27f1d8", //incorrect id
+          Type: "Lecture",
+          hall: "65fb0b0c6a06d629d70829c9",
+        });
+
+      expect(res.statusCode).to.equal(400);
+    });
+
+    it("should return 400 and all fields required", async () => {
+      const res = await request
+        .patch(`/v1/api/bookings/${postedId}`)
+        .set("Cookie", authCookie)
+        .send({
+          StartTime: "2020-12-10T12:00:00.000Z",
+          EndTime: "2020-12-12T14:00:00.000Z",
+          BookedDay: "2020-12-12",
+          Type: "lecture",
+        });
+
+      expect(res.statusCode).to.equal(400);
+    });
+  });
+
+  describe("DELETE /v1/api/bookings/:id", () => {
+    it("should return 500 server error", async () => {
+      // Make the request and include the auth cookie in the headers
+      const res = await request
+        .delete("/v1/api/bookings/5fb0b0c6a06d629d70829c9")
+        .set("Cookie", authCookie);
+
+      expect(res.statusCode).to.equal(500);
+    });
+
+    it("should return 200 and a booking", async () => {
+      logger.info(`[poop]/v1/api/bookings/${postedId}`);
+      // Make the request and include the auth cookie in the headers
+      const res = await request
+        .delete(`/v1/api/bookings/${postedId}`)
         .set("Cookie", authCookie);
 
       expect(res.statusCode).to.equal(200);
