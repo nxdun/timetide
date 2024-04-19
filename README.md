@@ -47,7 +47,6 @@ To install TimeTide, follow these steps:
 -  `npm run test2 `:Runs all Unit + Intergration Tests
 
 ## Setting-enviroment-variables
-⭐ [My .env File](https://drive.google.com/file/d/1QeHdHceKwxdHtbQRAgK6_OBljQ6y6wFk/view?usp=drive_link)
 
 - `PORT`: (Specify the port number your server will run on)
 - `MONGOSTRING`: "mongodb+srv:// "

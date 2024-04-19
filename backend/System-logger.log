@@ -1,0 +1,123 @@
+{"level":50,"time":1713497218574,"pid":2512,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497232553,"pid":2512,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497236001,"pid":2512,"hostname":"NADUN","msg":" .recived request to generate timetable for student with id: 65ff986895dc3d7fc6ab3f94"}
+{"level":30,"time":1713497236110,"pid":2512,"hostname":"NADUN","msg":" .student found in db"}
+{"level":30,"time":1713497236111,"pid":2512,"hostname":"NADUN","msg":"  ..for loop  schedules  : courseId 65ff8b79c8c662485f405eff"}
+{"level":30,"time":1713497236196,"pid":2512,"hostname":"NADUN","msg":"  ..course found in db with id: SE8990"}
+{"level":30,"time":1713497236362,"pid":2512,"hostname":"NADUN","msg":"  ..lecturer names found for course: perera andera,Dr. Jane Smith"}
+{"level":30,"time":1713497236362,"pid":2512,"hostname":"NADUN","msg":"  ..for loop started 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497236362,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497236450,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: Lecture"}
+{"level":30,"time":1713497236536,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: F345"}
+{"level":30,"time":1713497236598,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497236675,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: LAB"}
+{"level":30,"time":1713497236745,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: F466"}
+{"level":30,"time":1713497236745,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497236833,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: Tutorial"}
+{"level":30,"time":1713497236907,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: G605"}
+{"level":30,"time":1713497236907,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497236984,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: Tutorial"}
+{"level":30,"time":1713497237059,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: G301"}
+{"level":30,"time":1713497237059,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497237139,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: LAB"}
+{"level":30,"time":1713497237219,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: G301"}
+{"level":30,"time":1713497237220,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497237295,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: Lecture"}
+{"level":30,"time":1713497237381,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: H001"}
+{"level":30,"time":1713497237382,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497237460,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: LAB"}
+{"level":30,"time":1713497237536,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: H001"}
+{"level":50,"time":1713497262708,"pid":2512,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":50,"time":1713497642136,"pid":2512,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497657077,"pid":2512,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497661859,"pid":2512,"hostname":"NADUN","msg":" .recived request to generate timetable for student with id: 65ff986895dc3d7fc6ab3f94"}
+{"level":30,"time":1713497661955,"pid":2512,"hostname":"NADUN","msg":" .student found in db"}
+{"level":30,"time":1713497661955,"pid":2512,"hostname":"NADUN","msg":"  ..for loop  schedules  : courseId 65ff8b79c8c662485f405eff"}
+{"level":30,"time":1713497662036,"pid":2512,"hostname":"NADUN","msg":"  ..course found in db with id: SE8990"}
+{"level":30,"time":1713497662200,"pid":2512,"hostname":"NADUN","msg":"  ..lecturer names found for course: perera andera,Dr. Jane Smith"}
+{"level":30,"time":1713497662200,"pid":2512,"hostname":"NADUN","msg":"  ..for loop started 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497662200,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497662285,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: Lecture"}
+{"level":30,"time":1713497662377,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: F345"}
+{"level":30,"time":1713497662378,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497662457,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: LAB"}
+{"level":30,"time":1713497662532,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: F466"}
+{"level":30,"time":1713497662533,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497662620,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: Tutorial"}
+{"level":30,"time":1713497662702,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: G605"}
+{"level":30,"time":1713497662703,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497662792,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: Tutorial"}
+{"level":30,"time":1713497662870,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: G301"}
+{"level":30,"time":1713497662871,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497662951,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: LAB"}
+{"level":30,"time":1713497663032,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: G301"}
+{"level":30,"time":1713497663033,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497663112,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: Lecture"}
+{"level":30,"time":1713497663205,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: H001"}
+{"level":30,"time":1713497663206,"pid":2512,"hostname":"NADUN","msg":"   ...for loop schedules   : scheduleId 65ff921654a13bfdeb321fd7,65ff92b354a13bfdeb321fdc,65ff931054a13bfdeb321fe1,65ff935354a13bfdeb321fe5,65ff938654a13bfdeb321fe9,65ff93da54a13bfdeb321fee,65ff949f9c1726b254639128"}
+{"level":30,"time":1713497663296,"pid":2512,"hostname":"NADUN","msg":"   ...schedule found for course with type: LAB"}
+{"level":30,"time":1713497663376,"pid":2512,"hostname":"NADUN","msg":"   ...hall found for schedule with name: H001"}
+{"level":30,"time":1713497739202,"pid":2512,"hostname":"NADUN","msg":"[Notifi]Request reciver for notifications by user id  65fb8bd92e9b78fe7fd93711"}
+{"level":30,"time":1713497931753,"pid":17964,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1713497931760,"pid":17964,"hostname":"NADUN","msg":"This is an error log"}
+{"level":30,"time":1713497931760,"pid":17964,"hostname":"NADUN","msg":"This is an info log"}
+{"level":40,"time":1713497931760,"pid":17964,"hostname":"NADUN","msg":"This is a warn log"}
+{"level":30,"time":1713497933280,"pid":17964,"hostname":"NADUN","msg":"Database connection established"}
+{"level":30,"time":1713497933291,"pid":17964,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1713497933291,"pid":17964,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":50,"time":1713497933389,"pid":17964,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497933397,"pid":17964,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1713497933406,"pid":17964,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1713497933412,"pid":17964,"hostname":"NADUN","msg":"validateRefObject middleware called"}
+{"level":30,"time":1713497933415,"pid":17964,"hostname":"NADUN","msg":"Database connection closed"}
+{"level":30,"time":1713497961650,"pid":9608,"hostname":"NADUN","msg":"Server is running on port  3030"}
+{"level":30,"time":1713497962674,"pid":9608,"hostname":"NADUN","msg":"Database connection established"}
+{"level":50,"time":1713497963385,"pid":9608,"hostname":"NADUN","msg":"[getUserRole] User adminzilaA not found"}
+{"level":50,"time":1713497963552,"pid":9608,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1713497963722,"pid":9608,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497964386,"pid":9608,"hostname":"NADUN","msg":"userRolesRoutes] New user role created successfully with id: 6621e76c0e3ae9f2c9d2cee3"}
+{"level":50,"time":1713497964528,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497964683,"pid":9608,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":50,"time":1713497964688,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":50,"time":1713497964940,"pid":9608,"hostname":"NADUN","msg":"[getUserRole] User adminzilaA not found"}
+{"level":50,"time":1713497965103,"pid":9608,"hostname":"NADUN","msg":"invalid login: adminzila"}
+{"level":30,"time":1713497965253,"pid":9608,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497965394,"pid":9608,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497965396,"pid":9608,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTM0OTc5NjUsImV4cCI6MTcxMzUxNTk2NX0.a5YMmjWEoF7w2utRtlZAgEYLWt8xdDdTw-1IpyPy5qA"}
+{"level":50,"time":1713497965622,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497966260,"pid":9608,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 6621e76e0e3ae9f2c9d2cef5"}
+{"level":50,"time":1713497966270,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":50,"time":1713497966280,"pid":9608,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
+{"level":30,"time":1713497966282,"pid":9608,"hostname":"NADUN","msg":"[poop]/v1/api/courses/6621e76e0e3ae9f2c9d2cef5"}
+{"level":30,"time":1713497966640,"pid":9608,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497966642,"pid":9608,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTM0OTc5NjYsImV4cCI6MTcxMzUxNTk2Nn0.g0OY6joRQaaG_yd4LAh9eqLtL4ASUY2ajlSid_4GN_E"}
+{"level":50,"time":1713497966739,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497967399,"pid":9608,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 6621e76f0e3ae9f2c9d2cf02"}
+{"level":50,"time":1713497967410,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":50,"time":1713497967418,"pid":9608,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
+{"level":30,"time":1713497967422,"pid":9608,"hostname":"NADUN","msg":"[poop]/v1/api/courses/6621e76f0e3ae9f2c9d2cf02"}
+{"level":30,"time":1713497967756,"pid":9608,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497967758,"pid":9608,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTM0OTc5NjcsImV4cCI6MTcxMzUxNTk2N30.shWyj0BS1RiHttzJZjLsQ5q3MNc91W_ECPG9LDLPSOs"}
+{"level":30,"time":1713497968162,"pid":9608,"hostname":"NADUN","msg":"[ttest2] postedId: 6621e7700e3ae9f2c9d2cf0a"}
+{"level":50,"time":1713497968343,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":50,"time":1713497968355,"pid":9608,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":50,"time":1713497969659,"pid":9608,"hostname":"NADUN","msg":"[bookingsRoutes] patch request failed with error: Bookings validation failed: Type: `lecture` is not a valid enum value for path `Type`."}
+{"level":50,"time":1713497969673,"pid":9608,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":30,"time":1713497969677,"pid":9608,"hostname":"NADUN","msg":"[poop]/v1/api/bookings/6621e7700e3ae9f2c9d2cf0a"}
+{"level":30,"time":1713497970019,"pid":9608,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497970021,"pid":9608,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTM0OTc5NzAsImV4cCI6MTcxMzUxNTk3MH0.ZVvmPuYMNNii-TUNUQmnn3lTEwAJ7EidC4X1UoFf8Ts"}
+{"level":50,"time":1713497970132,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497970743,"pid":9608,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 6621e7720e3ae9f2c9d2cf25"}
+{"level":50,"time":1713497970753,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497971266,"pid":9608,"hostname":"NADUN","msg":"[CCCCCCCCCCCCCCC] postedCid: 6621e7730e3ae9f2c9d2cf2d"}
+{"level":50,"time":1713497971364,"pid":9608,"hostname":"NADUN","msg":"[courseRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Course\""}
+{"level":50,"time":1713497971370,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":30,"time":1713497971372,"pid":9608,"hostname":"NADUN","msg":"[poop]/v1/api/courses/6621e7730e3ae9f2c9d2cf2d"}
+{"level":30,"time":1713497971831,"pid":9608,"hostname":"NADUN","msg":"Login successful for username: adminzila with role: admin"}
+{"level":30,"time":1713497971834,"pid":9608,"hostname":"NADUN","msg":"[test2] authCookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluemlsYSIsInJvbGUiOiJhZG1pbiIsInJlZiI6eyJfaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJ1c2VybmFtZSI6ImFkbWluemlsYSIsInBhc3N3b3JkIjoiJDJhJDEwJDRleG9GOS93eXcxNmg1bjA1OUQxL2VybEhSYk9xOUsxOU52YWQ3a0I4MThGREZvN0V1dG5hIiwicm9sZSI6ImFkbWluIiwicmVmT2JqZWN0IjoiNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3IiwiX192IjowfSwiaWQiOiI2NWZlYjc3ZTE2ZGM4MmYxYTJlOWEyZDYiLCJpYXQiOjE3MTM0OTc5NzEsImV4cCI6MTcxMzUxNTk3MX0.DKHNJvnkV7MlrAdbCxCjeLu0RqfFKU5Zl07SHxAk_hg"}
+{"level":30,"time":1713497972346,"pid":9608,"hostname":"NADUN","msg":"[ttest2] postedId: 6621e7740e3ae9f2c9d2cf37"}
+{"level":50,"time":1713497972643,"pid":9608,"hostname":"NADUN","msg":"Access denied. No token provided by client"}
+{"level":50,"time":1713497972651,"pid":9608,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":50,"time":1713497973773,"pid":9608,"hostname":"NADUN","msg":"[bookingsRoutes] patch request failed with error: Bookings validation failed: Type: `lecture` is not a valid enum value for path `Type`."}
+{"level":50,"time":1713497973789,"pid":9608,"hostname":"NADUN","msg":"[bookingsRoutes] get request failed with error: Cast to ObjectId failed for value \"5fb0b0c6a06d629d70829c9\" (type string) at path \"_id\" for model \"Bookings\""}
+{"level":30,"time":1713497973792,"pid":9608,"hostname":"NADUN","msg":"[poop]/v1/api/bookings/6621e7740e3ae9f2c9d2cf37"}
